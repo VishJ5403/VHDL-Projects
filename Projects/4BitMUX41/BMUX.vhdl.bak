@@ -1,0 +1,29 @@
+library ieee;
+use ieee.std_logic_1164.all;
+library ieee;
+use ieee.std_logic_1164.all;
+library work;
+use work.Gates.all;
+use work.MUX_41.all;
+library ieee;
+use ieee.std_logic_1164.all;
+entity BMUX is
+port(     I    : in std_logic_vector(3 downto 0);
+	       J    : in std_logic_vector(3 downto 0);
+	       K    : in std_logic_vector(3 downto 0);
+	       L    : in std_logic_vector(3 downto 0);
+          S    : in std_logic_vector(1 downto 0);
+          Y    : out std_logic_vector(3 downto 0);
+end entity BMUX;
+architecture Structure of BMUX is
+
+signal a,b: std_logic;
+signal tmp0,tmp1,tmp2,tmp3 : std_logic_vector ( 1 downto 0 );
+
+begin
+tmp0<=(I(3) & I(2) & I(1) & I(0));
+tmp1<=(J(3) & J(2) & J(1) & J(0));
+tmp2<=(K(3) & K(2) & K(1) & K(0));
+tmp3<=(L(3) & L(2) & L(1) & L(0));
+  m1:MUX41 port map(tmp0,tmp1,tmp2,tmp3,S(0),S(1));
+end Structure;

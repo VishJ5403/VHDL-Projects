@@ -1,0 +1,809 @@
+Timing Analyzer report for DUT
+Fri Apr 29 19:19:25 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'lcd_clk'
+ 12. Setup: 'clk'
+ 13. Setup: 'clk_slow'
+ 14. Hold: 'clk'
+ 15. Hold: 'lcd_clk'
+ 16. Hold: 'clk_slow'
+ 17. Setup Transfers
+ 18. Hold Transfers
+ 19. Report TCCS
+ 20. Report RSKM
+ 21. Unconstrained Paths Summary
+ 22. Clock Status Summary
+ 23. Unconstrained Input Ports
+ 24. Unconstrained Output Ports
+ 25. Unconstrained Input Ports
+ 26. Unconstrained Output Ports
+ 27. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; DUT                                                 ;
+; Device Family         ; MAX V                                               ;
+; Device Name           ; 5M1270ZT144C5                                       ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Slow Model                                          ;
+; Rise/Fall Delays      ; Unavailable                                         ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                               ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets      ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }      ;
+; clk_slow   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_slow } ;
+; lcd_clk    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { lcd_clk }  ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Fmax Summary                                                                                              ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 78.88 MHz  ; 78.88 MHz       ; lcd_clk    ;                                                               ;
+; 79.97 MHz  ; 79.97 MHz       ; clk        ;                                                               ;
+; 357.91 MHz ; 304.04 MHz      ; clk_slow   ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Setup Summary                      ;
++----------+---------+---------------+
+; Clock    ; Slack   ; End Point TNS ;
++----------+---------+---------------+
+; lcd_clk  ; -11.678 ; -590.985      ;
+; clk      ; -11.505 ; -237.956      ;
+; clk_slow ; -1.794  ; -8.563        ;
++----------+---------+---------------+
+
+
++-----------------------------------+
+; Hold Summary                      ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; clk      ; -1.347 ; -1.347        ;
+; lcd_clk  ; 1.078  ; 0.000         ;
+; clk_slow ; 1.660  ; 0.000         ;
++----------+--------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++-----------------------------------+
+; Minimum Pulse Width Summary       ;
++----------+--------+---------------+
+; Clock    ; Slack  ; End Point TNS ;
++----------+--------+---------------+
+; clk      ; -2.289 ; -2.289        ;
+; clk_slow ; -2.289 ; -2.289        ;
+; lcd_clk  ; 0.234  ; 0.000         ;
++----------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Setup: 'lcd_clk'                                                                                            ;
++---------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+; -11.678 ; i[24]     ; write_data[1]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 12.345     ;
+; -11.360 ; i[25]     ; write_data[1]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 12.027     ;
+; -11.266 ; i[24]     ; write_data[0]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.933     ;
+; -11.204 ; i[28]     ; write_data[1]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.871     ;
+; -11.199 ; i[30]     ; write_data[1]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.866     ;
+; -11.193 ; i[11]     ; write_data[1]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.860     ;
+; -11.055 ; i[16]     ; write_data[1]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.722     ;
+; -11.048 ; i[14]     ; write_data[1]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.715     ;
+; -11.023 ; i[27]     ; write_data[1]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.690     ;
+; -10.965 ; i[24]     ; i[5]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.632     ;
+; -10.965 ; i[24]     ; i[4]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.632     ;
+; -10.965 ; i[24]     ; i[3]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.632     ;
+; -10.965 ; i[24]     ; i[1]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.632     ;
+; -10.965 ; i[24]     ; i[0]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.632     ;
+; -10.965 ; i[24]     ; i[2]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.632     ;
+; -10.948 ; i[25]     ; write_data[0]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.615     ;
+; -10.918 ; i[11]     ; i[5]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.585     ;
+; -10.918 ; i[11]     ; i[4]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.585     ;
+; -10.918 ; i[11]     ; i[3]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.585     ;
+; -10.918 ; i[11]     ; i[1]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.585     ;
+; -10.918 ; i[11]     ; i[0]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.585     ;
+; -10.918 ; i[11]     ; i[2]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.585     ;
+; -10.883 ; i[24]     ; write_data[4]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.550     ;
+; -10.881 ; i[12]     ; write_data[1]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.548     ;
+; -10.865 ; i[26]     ; write_data[1]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.532     ;
+; -10.828 ; i[24]     ; write_data[6]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.495     ;
+; -10.825 ; i[13]     ; write_data[1]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.492     ;
+; -10.792 ; i[28]     ; write_data[0]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.459     ;
+; -10.787 ; i[30]     ; write_data[0]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.454     ;
+; -10.781 ; i[11]     ; write_data[0]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.448     ;
+; -10.781 ; i[18]     ; write_data[1]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.448     ;
+; -10.780 ; i[16]     ; i[5]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.447     ;
+; -10.780 ; i[16]     ; i[4]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.447     ;
+; -10.780 ; i[16]     ; i[3]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.447     ;
+; -10.780 ; i[16]     ; i[1]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.447     ;
+; -10.780 ; i[16]     ; i[0]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.447     ;
+; -10.780 ; i[16]     ; i[2]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.447     ;
+; -10.776 ; i[24]     ; write_data[3]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.443     ;
+; -10.773 ; i[14]     ; i[5]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.440     ;
+; -10.773 ; i[14]     ; i[4]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.440     ;
+; -10.773 ; i[14]     ; i[3]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.440     ;
+; -10.773 ; i[14]     ; i[1]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.440     ;
+; -10.773 ; i[14]     ; i[0]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.440     ;
+; -10.773 ; i[14]     ; i[2]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.440     ;
+; -10.755 ; i[24]     ; write_column[1] ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.422     ;
+; -10.754 ; i[24]     ; write_column[3] ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.421     ;
+; -10.752 ; i[11]     ; write_data[6]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.419     ;
+; -10.738 ; i[24]     ; write_data[2]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.405     ;
+; -10.721 ; i[10]     ; write_data[1]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.388     ;
+; -10.700 ; i[17]     ; write_data[1]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.367     ;
+; -10.658 ; i[23]     ; write_data[1]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.325     ;
+; -10.647 ; i[25]     ; i[5]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.314     ;
+; -10.647 ; i[25]     ; i[4]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.314     ;
+; -10.647 ; i[25]     ; i[3]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.314     ;
+; -10.647 ; i[25]     ; i[1]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.314     ;
+; -10.647 ; i[25]     ; i[0]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.314     ;
+; -10.647 ; i[25]     ; i[2]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.314     ;
+; -10.643 ; i[16]     ; write_data[0]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.310     ;
+; -10.636 ; i[14]     ; write_data[0]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.303     ;
+; -10.614 ; i[16]     ; write_data[6]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.281     ;
+; -10.611 ; i[27]     ; write_data[0]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.278     ;
+; -10.607 ; i[14]     ; write_data[6]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.274     ;
+; -10.606 ; i[12]     ; i[5]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.273     ;
+; -10.606 ; i[12]     ; i[4]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.273     ;
+; -10.606 ; i[12]     ; i[3]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.273     ;
+; -10.606 ; i[12]     ; i[1]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.273     ;
+; -10.606 ; i[12]     ; i[0]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.273     ;
+; -10.606 ; i[12]     ; i[2]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.273     ;
+; -10.587 ; i[21]     ; write_data[1]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.254     ;
+; -10.571 ; i[15]     ; write_data[1]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.238     ;
+; -10.565 ; i[25]     ; write_data[4]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.232     ;
+; -10.550 ; i[13]     ; i[5]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.217     ;
+; -10.550 ; i[13]     ; i[4]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.217     ;
+; -10.550 ; i[13]     ; i[3]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.217     ;
+; -10.550 ; i[13]     ; i[1]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.217     ;
+; -10.550 ; i[13]     ; i[0]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.217     ;
+; -10.550 ; i[13]     ; i[2]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.217     ;
+; -10.541 ; i[7]      ; write_data[1]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.208     ;
+; -10.527 ; i[19]     ; write_data[1]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.194     ;
+; -10.510 ; i[25]     ; write_data[6]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.177     ;
+; -10.506 ; i[18]     ; i[5]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.173     ;
+; -10.506 ; i[18]     ; i[4]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.173     ;
+; -10.506 ; i[18]     ; i[3]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.173     ;
+; -10.506 ; i[18]     ; i[1]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.173     ;
+; -10.506 ; i[18]     ; i[0]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.173     ;
+; -10.506 ; i[18]     ; i[2]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.173     ;
+; -10.491 ; i[28]     ; i[5]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.158     ;
+; -10.491 ; i[28]     ; i[4]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.158     ;
+; -10.491 ; i[28]     ; i[3]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.158     ;
+; -10.491 ; i[28]     ; i[1]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.158     ;
+; -10.491 ; i[28]     ; i[0]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.158     ;
+; -10.491 ; i[28]     ; i[2]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.158     ;
+; -10.486 ; i[30]     ; i[5]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.153     ;
+; -10.486 ; i[30]     ; i[4]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.153     ;
+; -10.486 ; i[30]     ; i[3]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.153     ;
+; -10.486 ; i[30]     ; i[1]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.153     ;
+; -10.486 ; i[30]     ; i[0]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.153     ;
+; -10.486 ; i[30]     ; i[2]            ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.153     ;
+; -10.485 ; i[29]     ; write_data[1]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.152     ;
+; -10.471 ; i[8]      ; write_data[1]   ; lcd_clk      ; lcd_clk     ; 1.000        ; 0.000      ; 11.138     ;
++---------+-----------+-----------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Setup: 'clk'                                                                                              ;
++---------+-------------+-------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node   ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+-------------+-------------+--------------+-------------+--------------+------------+------------+
+; -11.505 ; div_clk[16] ; lcd_clk     ; clk          ; clk         ; 1.000        ; 0.000      ; 12.172     ;
+; -11.419 ; div_clk[6]  ; lcd_clk     ; clk          ; clk         ; 1.000        ; 0.000      ; 12.086     ;
+; -11.371 ; div_clk[11] ; lcd_clk     ; clk          ; clk         ; 1.000        ; 0.000      ; 12.038     ;
+; -11.358 ; div_clk[9]  ; lcd_clk     ; clk          ; clk         ; 1.000        ; 0.000      ; 12.025     ;
+; -11.353 ; div_clk[7]  ; lcd_clk     ; clk          ; clk         ; 1.000        ; 0.000      ; 12.020     ;
+; -11.328 ; div_clk[8]  ; lcd_clk     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.995     ;
+; -11.322 ; div_clk[16] ; div_clk[16] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.989     ;
+; -11.320 ; div_clk[16] ; div_clk[17] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.987     ;
+; -11.319 ; div_clk[16] ; div_clk[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 11.986     ;
+; -11.236 ; div_clk[6]  ; div_clk[16] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.903     ;
+; -11.234 ; div_clk[6]  ; div_clk[17] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.901     ;
+; -11.233 ; div_clk[6]  ; div_clk[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 11.900     ;
+; -11.188 ; div_clk[11] ; div_clk[16] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.855     ;
+; -11.186 ; div_clk[11] ; div_clk[17] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.853     ;
+; -11.185 ; div_clk[11] ; div_clk[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 11.852     ;
+; -11.175 ; div_clk[9]  ; div_clk[16] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.842     ;
+; -11.173 ; div_clk[9]  ; div_clk[17] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.840     ;
+; -11.172 ; div_clk[9]  ; div_clk[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 11.839     ;
+; -11.170 ; div_clk[7]  ; div_clk[16] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.837     ;
+; -11.168 ; div_clk[7]  ; div_clk[17] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.835     ;
+; -11.167 ; div_clk[7]  ; div_clk[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 11.834     ;
+; -11.145 ; div_clk[8]  ; div_clk[16] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.812     ;
+; -11.143 ; div_clk[8]  ; div_clk[17] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.810     ;
+; -11.142 ; div_clk[8]  ; div_clk[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 11.809     ;
+; -11.141 ; div_clk[10] ; lcd_clk     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.808     ;
+; -11.094 ; div_clk[12] ; lcd_clk     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.761     ;
+; -11.072 ; div_clk[14] ; lcd_clk     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.739     ;
+; -10.997 ; div_clk[13] ; lcd_clk     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.664     ;
+; -10.985 ; div_clk[2]  ; lcd_clk     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.652     ;
+; -10.958 ; div_clk[10] ; div_clk[16] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.625     ;
+; -10.956 ; div_clk[10] ; div_clk[17] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.623     ;
+; -10.955 ; div_clk[10] ; div_clk[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 11.622     ;
+; -10.911 ; div_clk[12] ; div_clk[16] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.578     ;
+; -10.909 ; div_clk[12] ; div_clk[17] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.576     ;
+; -10.908 ; div_clk[12] ; div_clk[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 11.575     ;
+; -10.889 ; div_clk[14] ; div_clk[16] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.556     ;
+; -10.887 ; div_clk[14] ; div_clk[17] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.554     ;
+; -10.886 ; div_clk[14] ; div_clk[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 11.553     ;
+; -10.869 ; div_clk[16] ; div_clk[11] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.536     ;
+; -10.863 ; div_clk[17] ; lcd_clk     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.530     ;
+; -10.861 ; div_clk[16] ; div_clk[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 11.528     ;
+; -10.858 ; div_clk[16] ; div_clk[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.525     ;
+; -10.853 ; div_clk[3]  ; lcd_clk     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.520     ;
+; -10.814 ; div_clk[13] ; div_clk[16] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.481     ;
+; -10.812 ; div_clk[13] ; div_clk[17] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.479     ;
+; -10.811 ; div_clk[13] ; div_clk[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 11.478     ;
+; -10.802 ; div_clk[2]  ; div_clk[16] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.469     ;
+; -10.800 ; div_clk[2]  ; div_clk[17] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.467     ;
+; -10.799 ; div_clk[2]  ; div_clk[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 11.466     ;
+; -10.783 ; div_clk[6]  ; div_clk[11] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.450     ;
+; -10.775 ; div_clk[6]  ; div_clk[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 11.442     ;
+; -10.772 ; div_clk[6]  ; div_clk[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.439     ;
+; -10.760 ; div_clk[18] ; lcd_clk     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.427     ;
+; -10.752 ; div_clk[1]  ; lcd_clk     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.419     ;
+; -10.735 ; div_clk[11] ; div_clk[11] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.402     ;
+; -10.727 ; div_clk[11] ; div_clk[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 11.394     ;
+; -10.724 ; div_clk[11] ; div_clk[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.391     ;
+; -10.722 ; div_clk[9]  ; div_clk[11] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.389     ;
+; -10.717 ; div_clk[7]  ; div_clk[11] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.384     ;
+; -10.714 ; div_clk[9]  ; div_clk[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 11.381     ;
+; -10.711 ; div_clk[9]  ; div_clk[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.378     ;
+; -10.709 ; div_clk[7]  ; div_clk[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 11.376     ;
+; -10.706 ; div_clk[7]  ; div_clk[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.373     ;
+; -10.704 ; div_clk[15] ; lcd_clk     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.371     ;
+; -10.692 ; div_clk[8]  ; div_clk[11] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.359     ;
+; -10.684 ; div_clk[8]  ; div_clk[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 11.351     ;
+; -10.681 ; div_clk[8]  ; div_clk[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.348     ;
+; -10.680 ; div_clk[17] ; div_clk[16] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.347     ;
+; -10.678 ; div_clk[17] ; div_clk[17] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.345     ;
+; -10.677 ; div_clk[17] ; div_clk[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 11.344     ;
+; -10.670 ; div_clk[3]  ; div_clk[16] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.337     ;
+; -10.668 ; div_clk[3]  ; div_clk[17] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.335     ;
+; -10.667 ; div_clk[3]  ; div_clk[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 11.334     ;
+; -10.630 ; div_clk[0]  ; lcd_clk     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.297     ;
+; -10.627 ; div_clk[19] ; lcd_clk     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.294     ;
+; -10.577 ; div_clk[18] ; div_clk[16] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.244     ;
+; -10.575 ; div_clk[21] ; lcd_clk     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.242     ;
+; -10.575 ; div_clk[18] ; div_clk[17] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.242     ;
+; -10.574 ; div_clk[18] ; div_clk[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 11.241     ;
+; -10.569 ; div_clk[1]  ; div_clk[16] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.236     ;
+; -10.567 ; div_clk[1]  ; div_clk[17] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.234     ;
+; -10.566 ; div_clk[1]  ; div_clk[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 11.233     ;
+; -10.521 ; div_clk[15] ; div_clk[16] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.188     ;
+; -10.519 ; div_clk[15] ; div_clk[17] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.186     ;
+; -10.518 ; div_clk[15] ; div_clk[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 11.185     ;
+; -10.505 ; div_clk[10] ; div_clk[11] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.172     ;
+; -10.497 ; div_clk[10] ; div_clk[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 11.164     ;
+; -10.494 ; div_clk[10] ; div_clk[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.161     ;
+; -10.493 ; div_clk[23] ; lcd_clk     ; clk          ; clk         ; 1.000        ; 0.000      ; 11.160     ;
+; -10.458 ; div_clk[12] ; div_clk[11] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.125     ;
+; -10.450 ; div_clk[12] ; div_clk[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 11.117     ;
+; -10.447 ; div_clk[0]  ; div_clk[16] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.114     ;
+; -10.447 ; div_clk[12] ; div_clk[10] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.114     ;
+; -10.445 ; div_clk[0]  ; div_clk[17] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.112     ;
+; -10.444 ; div_clk[19] ; div_clk[16] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.111     ;
+; -10.444 ; div_clk[0]  ; div_clk[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 11.111     ;
+; -10.442 ; div_clk[19] ; div_clk[17] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.109     ;
+; -10.441 ; div_clk[19] ; div_clk[8]  ; clk          ; clk         ; 1.000        ; 0.000      ; 11.108     ;
+; -10.436 ; div_clk[14] ; div_clk[11] ; clk          ; clk         ; 1.000        ; 0.000      ; 11.103     ;
+; -10.428 ; div_clk[14] ; div_clk[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 11.095     ;
++---------+-------------+-------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'clk_slow'                                                                                                                                                        ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.794 ; cov_detect:covid_det_instance|y_present.s4  ; cov_detect:covid_det_instance|y_present.s4  ; clk_slow     ; clk_slow    ; 1.000        ; 0.000      ; 2.461      ;
+; -1.722 ; cov_detect:covid_det_instance|y_present.s2  ; cov_detect:covid_det_instance|y_present.s3  ; clk_slow     ; clk_slow    ; 1.000        ; 0.000      ; 2.389      ;
+; -1.687 ; cov_detect:covid_det_instance|y_present.s1  ; cov_detect:covid_det_instance|y_present.s2  ; clk_slow     ; clk_slow    ; 1.000        ; 0.000      ; 2.354      ;
+; -1.680 ; cov_detect:covid_det_instance|y_present.rst ; cov_detect:covid_det_instance|y_present.rst ; clk_slow     ; clk_slow    ; 1.000        ; 0.000      ; 2.347      ;
+; -1.680 ; cov_detect:covid_det_instance|y_present.s1  ; cov_detect:covid_det_instance|y_present.s1  ; clk_slow     ; clk_slow    ; 1.000        ; 0.000      ; 2.347      ;
+; -1.661 ; cov_detect:covid_det_instance|y_present.s3  ; cov_detect:covid_det_instance|y_present.s3  ; clk_slow     ; clk_slow    ; 1.000        ; 0.000      ; 2.328      ;
+; -1.635 ; cov_detect:covid_det_instance|y_present.s3  ; cov_detect:covid_det_instance|y_present.s4  ; clk_slow     ; clk_slow    ; 1.000        ; 0.000      ; 2.302      ;
+; -1.572 ; cov_detect:covid_det_instance|y_present.rst ; cov_detect:covid_det_instance|y_present.s1  ; clk_slow     ; clk_slow    ; 1.000        ; 0.000      ; 2.239      ;
+; -1.229 ; cov_detect:covid_det_instance|y_present.s4  ; cov_detect:covid_det_instance|y_present.rst ; clk_slow     ; clk_slow    ; 1.000        ; 0.000      ; 1.896      ;
+; -1.214 ; cov_detect:covid_det_instance|y_present.s2  ; cov_detect:covid_det_instance|y_present.s2  ; clk_slow     ; clk_slow    ; 1.000        ; 0.000      ; 1.881      ;
++--------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Hold: 'clk'                                                                                              ;
++--------+-------------+-------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node   ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------+-------------+--------------+-------------+--------------+------------+------------+
+; -1.347 ; lcd_clk     ; lcd_clk     ; lcd_clk      ; clk         ; 0.000        ; 3.699      ; 2.949      ;
+; -0.847 ; lcd_clk     ; lcd_clk     ; lcd_clk      ; clk         ; -0.500       ; 3.699      ; 2.949      ;
+; 2.864  ; div_clk[1]  ; div_clk[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 3.085      ;
+; 2.999  ; div_clk[0]  ; div_clk[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 3.220      ;
+; 3.116  ; div_clk[5]  ; div_clk[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 3.337      ;
+; 3.125  ; div_clk[4]  ; div_clk[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 3.346      ;
+; 3.644  ; div_clk[2]  ; div_clk[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 3.865      ;
+; 3.651  ; div_clk[22] ; div_clk[22] ; clk          ; clk         ; 0.000        ; 0.000      ; 3.872      ;
+; 3.788  ; div_clk[27] ; div_clk[27] ; clk          ; clk         ; 0.000        ; 0.000      ; 4.009      ;
+; 3.896  ; div_clk[29] ; div_clk[29] ; clk          ; clk         ; 0.000        ; 0.000      ; 4.117      ;
+; 3.908  ; div_clk[26] ; div_clk[26] ; clk          ; clk         ; 0.000        ; 0.000      ; 4.129      ;
+; 3.915  ; div_clk[28] ; div_clk[28] ; clk          ; clk         ; 0.000        ; 0.000      ; 4.136      ;
+; 3.923  ; div_clk[3]  ; div_clk[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.144      ;
+; 3.942  ; div_clk[4]  ; div_clk[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.163      ;
+; 4.095  ; div_clk[1]  ; div_clk[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.316      ;
+; 4.118  ; div_clk[30] ; div_clk[30] ; clk          ; clk         ; 0.000        ; 0.000      ; 4.339      ;
+; 4.143  ; div_clk[0]  ; div_clk[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.364      ;
+; 4.155  ; div_clk[1]  ; div_clk[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.376      ;
+; 4.276  ; div_clk[1]  ; div_clk[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.497      ;
+; 4.280  ; div_clk[3]  ; div_clk[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.501      ;
+; 4.400  ; div_clk[2]  ; div_clk[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.621      ;
+; 4.401  ; div_clk[3]  ; div_clk[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.622      ;
+; 4.405  ; div_clk[0]  ; div_clk[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.626      ;
+; 4.415  ; div_clk[0]  ; div_clk[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.636      ;
+; 4.441  ; div_clk[31] ; div_clk[31] ; clk          ; clk         ; 0.000        ; 0.000      ; 4.662      ;
+; 4.452  ; div_clk[26] ; div_clk[27] ; clk          ; clk         ; 0.000        ; 0.000      ; 4.673      ;
+; 4.459  ; div_clk[24] ; div_clk[24] ; clk          ; clk         ; 0.000        ; 0.000      ; 4.680      ;
+; 4.494  ; div_clk[1]  ; div_clk[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.715      ;
+; 4.521  ; div_clk[2]  ; div_clk[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.742      ;
+; 4.567  ; div_clk[0]  ; div_clk[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.788      ;
+; 4.718  ; div_clk[28] ; div_clk[29] ; clk          ; clk         ; 0.000        ; 0.000      ; 4.939      ;
+; 4.739  ; div_clk[2]  ; div_clk[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 4.960      ;
+; 4.822  ; div_clk[26] ; div_clk[28] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.043      ;
+; 4.855  ; div_clk[0]  ; div_clk[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 5.076      ;
+; 4.901  ; div_clk[15] ; div_clk[15] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.122      ;
+; 4.910  ; div_clk[27] ; div_clk[28] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.131      ;
+; 4.929  ; div_clk[26] ; div_clk[29] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.150      ;
+; 4.944  ; div_clk[29] ; div_clk[30] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.165      ;
+; 4.951  ; div_clk[21] ; div_clk[21] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.172      ;
+; 5.005  ; div_clk[20] ; div_clk[20] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.226      ;
+; 5.017  ; div_clk[27] ; div_clk[29] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.238      ;
+; 5.070  ; div_clk[28] ; div_clk[30] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.291      ;
+; 5.090  ; div_clk[21] ; div_clk[22] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.311      ;
+; 5.186  ; div_clk[12] ; div_clk[12] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.407      ;
+; 5.235  ; div_clk[22] ; div_clk[24] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.456      ;
+; 5.238  ; div_clk[18] ; div_clk[18] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.459      ;
+; 5.281  ; div_clk[26] ; div_clk[30] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.502      ;
+; 5.331  ; div_clk[19] ; div_clk[19] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.552      ;
+; 5.362  ; div_clk[7]  ; div_clk[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 5.583      ;
+; 5.369  ; div_clk[27] ; div_clk[30] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.590      ;
+; 5.425  ; div_clk[5]  ; div_clk[22] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.646      ;
+; 5.458  ; div_clk[20] ; div_clk[22] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.679      ;
+; 5.462  ; div_clk[24] ; div_clk[27] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.683      ;
+; 5.475  ; div_clk[4]  ; div_clk[22] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.696      ;
+; 5.476  ; div_clk[30] ; div_clk[31] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.697      ;
+; 5.486  ; div_clk[22] ; div_clk[27] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.707      ;
+; 5.498  ; div_clk[5]  ; div_clk[15] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.719      ;
+; 5.511  ; div_clk[23] ; div_clk[23] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.732      ;
+; 5.522  ; div_clk[22] ; div_clk[23] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.743      ;
+; 5.536  ; div_clk[29] ; div_clk[31] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.757      ;
+; 5.548  ; div_clk[4]  ; div_clk[15] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.769      ;
+; 5.662  ; div_clk[28] ; div_clk[31] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.883      ;
+; 5.686  ; div_clk[5]  ; div_clk[12] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.907      ;
+; 5.693  ; div_clk[13] ; div_clk[13] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.914      ;
+; 5.717  ; div_clk[24] ; div_clk[29] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.938      ;
+; 5.721  ; div_clk[24] ; div_clk[28] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.942      ;
+; 5.723  ; div_clk[19] ; div_clk[22] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.944      ;
+; 5.725  ; div_clk[24] ; div_clk[26] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.946      ;
+; 5.736  ; div_clk[4]  ; div_clk[12] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.957      ;
+; 5.739  ; div_clk[0]  ; div_clk[22] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.960      ;
+; 5.741  ; div_clk[22] ; div_clk[29] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.962      ;
+; 5.742  ; div_clk[9]  ; div_clk[9]  ; clk          ; clk         ; 0.000        ; 0.000      ; 5.963      ;
+; 5.745  ; div_clk[22] ; div_clk[28] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.966      ;
+; 5.749  ; div_clk[22] ; div_clk[26] ; clk          ; clk         ; 0.000        ; 0.000      ; 5.970      ;
+; 5.785  ; div_clk[25] ; div_clk[25] ; clk          ; clk         ; 0.000        ; 0.000      ; 6.006      ;
+; 5.809  ; div_clk[1]  ; div_clk[22] ; clk          ; clk         ; 0.000        ; 0.000      ; 6.030      ;
+; 5.812  ; div_clk[0]  ; div_clk[15] ; clk          ; clk         ; 0.000        ; 0.000      ; 6.033      ;
+; 5.813  ; div_clk[15] ; div_clk[22] ; clk          ; clk         ; 0.000        ; 0.000      ; 6.034      ;
+; 5.827  ; div_clk[5]  ; div_clk[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 6.048      ;
+; 5.844  ; div_clk[18] ; div_clk[22] ; clk          ; clk         ; 0.000        ; 0.000      ; 6.065      ;
+; 5.873  ; div_clk[26] ; div_clk[31] ; clk          ; clk         ; 0.000        ; 0.000      ; 6.094      ;
+; 5.877  ; div_clk[4]  ; div_clk[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 6.098      ;
+; 5.882  ; div_clk[1]  ; div_clk[15] ; clk          ; clk         ; 0.000        ; 0.000      ; 6.103      ;
+; 5.920  ; div_clk[23] ; div_clk[24] ; clk          ; clk         ; 0.000        ; 0.000      ; 6.141      ;
+; 5.934  ; div_clk[3]  ; div_clk[22] ; clk          ; clk         ; 0.000        ; 0.000      ; 6.155      ;
+; 5.935  ; div_clk[17] ; div_clk[22] ; clk          ; clk         ; 0.000        ; 0.000      ; 6.156      ;
+; 5.941  ; div_clk[8]  ; div_clk[8]  ; clk          ; clk         ; 0.000        ; 0.000      ; 6.162      ;
+; 5.941  ; div_clk[25] ; div_clk[27] ; clk          ; clk         ; 0.000        ; 0.000      ; 6.162      ;
+; 5.942  ; div_clk[13] ; div_clk[15] ; clk          ; clk         ; 0.000        ; 0.000      ; 6.163      ;
+; 5.956  ; div_clk[17] ; div_clk[17] ; clk          ; clk         ; 0.000        ; 0.000      ; 6.177      ;
+; 5.956  ; div_clk[5]  ; div_clk[9]  ; clk          ; clk         ; 0.000        ; 0.000      ; 6.177      ;
+; 5.958  ; div_clk[24] ; div_clk[30] ; clk          ; clk         ; 0.000        ; 0.000      ; 6.179      ;
+; 5.961  ; div_clk[27] ; div_clk[31] ; clk          ; clk         ; 0.000        ; 0.000      ; 6.182      ;
+; 5.978  ; div_clk[21] ; div_clk[24] ; clk          ; clk         ; 0.000        ; 0.000      ; 6.199      ;
+; 5.982  ; div_clk[22] ; div_clk[30] ; clk          ; clk         ; 0.000        ; 0.000      ; 6.203      ;
+; 5.998  ; div_clk[11] ; div_clk[11] ; clk          ; clk         ; 0.000        ; 0.000      ; 6.219      ;
+; 6.000  ; div_clk[0]  ; div_clk[12] ; clk          ; clk         ; 0.000        ; 0.000      ; 6.221      ;
+; 6.006  ; div_clk[4]  ; div_clk[9]  ; clk          ; clk         ; 0.000        ; 0.000      ; 6.227      ;
+; 6.007  ; div_clk[3]  ; div_clk[15] ; clk          ; clk         ; 0.000        ; 0.000      ; 6.228      ;
+; 6.022  ; div_clk[5]  ; div_clk[27] ; clk          ; clk         ; 0.000        ; 0.000      ; 6.243      ;
++--------+-------------+-------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'lcd_clk'                                                                                                                                                         ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.078 ; lcd_controller:lcd_instance|ack             ; lcd_controller:lcd_instance|ack             ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 1.299      ;
+; 1.401 ; write_column[1]                             ; lcd_controller:lcd_instance|cmd_position[1] ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 1.622      ;
+; 1.646 ; lcd_controller:lcd_instance|cmd_position[0] ; lcd_controller:lcd_instance|lcd[0]          ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 1.867      ;
+; 1.691 ; lcd_controller:lcd_instance|state.S4        ; lcd_controller:lcd_instance|state.S5        ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 1.912      ;
+; 1.737 ; lcd_controller:lcd_instance|count_cmd[0]    ; lcd_controller:lcd_instance|count_cmd[2]    ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 1.958      ;
+; 1.739 ; lcd_controller:lcd_instance|count_cmd[0]    ; lcd_controller:lcd_instance|count_cmd[1]    ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 1.960      ;
+; 1.918 ; lcd_controller:lcd_instance|lcd_en          ; lcd_controller:lcd_instance|lcd_en          ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.139      ;
+; 1.924 ; lcd_controller:lcd_instance|state.S5        ; lcd_controller:lcd_instance|state.S6        ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.145      ;
+; 1.950 ; lcd_controller:lcd_instance|lcd_rs          ; lcd_controller:lcd_instance|lcd_rs          ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.171      ;
+; 1.965 ; lcd_controller:lcd_instance|count_cmd[1]    ; lcd_controller:lcd_instance|count_cmd[1]    ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.186      ;
+; 1.969 ; lcd_controller:lcd_instance|state.S9        ; lcd_controller:lcd_instance|state.S3        ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.190      ;
+; 1.974 ; lcd_controller:lcd_instance|count_cmd[1]    ; lcd_controller:lcd_instance|count_cmd[2]    ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.195      ;
+; 2.052 ; lcd_controller:lcd_instance|cmd_position[2] ; lcd_controller:lcd_instance|lcd[2]          ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.273      ;
+; 2.107 ; i[5]                                        ; i[5]                                        ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.328      ;
+; 2.108 ; i[3]                                        ; i[3]                                        ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.329      ;
+; 2.116 ; i[16]                                       ; i[16]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.337      ;
+; 2.116 ; i[6]                                        ; i[6]                                        ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.337      ;
+; 2.117 ; i[23]                                       ; i[23]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; i[13]                                       ; i[13]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.338      ;
+; 2.126 ; i[28]                                       ; i[28]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; i[25]                                       ; i[25]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; i[18]                                       ; i[18]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; i[17]                                       ; i[17]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; i[15]                                       ; i[15]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; i[8]                                        ; i[8]                                        ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; i[7]                                        ; i[7]                                        ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.347      ;
+; 2.133 ; lcd_controller:lcd_instance|data_dis[6]     ; lcd_controller:lcd_instance|lcd[6]          ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.354      ;
+; 2.134 ; i[27]                                       ; i[27]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.355      ;
+; 2.140 ; i[26]                                       ; i[26]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.361      ;
+; 2.155 ; lcd_controller:lcd_instance|state.S7        ; lcd_controller:lcd_instance|state.S8        ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.376      ;
+; 2.169 ; lcd_controller:lcd_instance|state.S0        ; lcd_controller:lcd_instance|state.S1        ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.390      ;
+; 2.212 ; i[4]                                        ; i[4]                                        ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.433      ;
+; 2.221 ; i[24]                                       ; i[24]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.442      ;
+; 2.221 ; i[19]                                       ; i[19]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.442      ;
+; 2.221 ; i[14]                                       ; i[14]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.442      ;
+; 2.221 ; i[9]                                        ; i[9]                                        ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.442      ;
+; 2.222 ; lcd_controller:lcd_instance|data_dis[5]     ; lcd_controller:lcd_instance|lcd[5]          ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.443      ;
+; 2.225 ; lcd_controller:lcd_instance|data_dis[4]     ; lcd_controller:lcd_instance|lcd[4]          ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.446      ;
+; 2.226 ; lcd_controller:lcd_instance|data_dis[1]     ; lcd_controller:lcd_instance|lcd[1]          ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.447      ;
+; 2.230 ; i[21]                                       ; i[21]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.451      ;
+; 2.230 ; i[11]                                       ; i[11]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.451      ;
+; 2.230 ; i[2]                                        ; i[2]                                        ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.451      ;
+; 2.231 ; i[22]                                       ; i[22]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; i[20]                                       ; i[20]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; i[12]                                       ; i[12]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; i[10]                                       ; i[10]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.452      ;
+; 2.239 ; i[1]                                        ; i[1]                                        ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.460      ;
+; 2.240 ; i[29]                                       ; i[29]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.461      ;
+; 2.259 ; lcd_controller:lcd_instance|count_cmd[2]    ; lcd_controller:lcd_instance|count_cmd[2]    ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.480      ;
+; 2.261 ; i[31]                                       ; i[31]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.482      ;
+; 2.262 ; i[30]                                       ; i[30]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.483      ;
+; 2.298 ; write_data[0]                               ; lcd_controller:lcd_instance|data_dis[0]     ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.519      ;
+; 2.309 ; lcd_controller:lcd_instance|count_cmd[0]    ; lcd_controller:lcd_instance|count_cmd[0]    ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.530      ;
+; 2.315 ; lcd_controller:lcd_instance|cmd_position[3] ; lcd_controller:lcd_instance|lcd[3]          ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.536      ;
+; 2.335 ; write_data[6]                               ; write_data[6]                               ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.556      ;
+; 2.356 ; lcd_controller:lcd_instance|state.S6        ; lcd_controller:lcd_instance|state.S7        ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.577      ;
+; 2.541 ; i[0]                                        ; i[0]                                        ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.762      ;
+; 2.648 ; lcd_controller:lcd_instance|state.S0        ; lcd_controller:lcd_instance|lcd_rs          ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.869      ;
+; 2.656 ; lcd_controller:lcd_instance|state.S0        ; lcd_controller:lcd_instance|ack             ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.877      ;
+; 2.657 ; lcd_controller:lcd_instance|state.S0        ; lcd_controller:lcd_instance|state.S3        ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.878      ;
+; 2.726 ; write_data[2]                               ; lcd_controller:lcd_instance|data_dis[2]     ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.947      ;
+; 2.753 ; write_data[0]                               ; write_data[0]                               ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.974      ;
+; 2.754 ; lcd_controller:lcd_instance|state.S1        ; lcd_controller:lcd_instance|state.S2        ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.975      ;
+; 2.756 ; lcd_controller:lcd_instance|state.S1        ; lcd_controller:lcd_instance|lcd_en          ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 2.977      ;
+; 2.801 ; write_data[4]                               ; lcd_controller:lcd_instance|data_dis[4]     ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.022      ;
+; 2.859 ; lcd_controller:lcd_instance|lcd[0]          ; lcd_controller:lcd_instance|lcd[0]          ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.080      ;
+; 2.940 ; i[3]                                        ; i[4]                                        ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.161      ;
+; 2.948 ; i[16]                                       ; i[17]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.169      ;
+; 2.948 ; i[6]                                        ; i[7]                                        ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.169      ;
+; 2.949 ; i[23]                                       ; i[24]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.170      ;
+; 2.949 ; i[13]                                       ; i[14]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.170      ;
+; 2.958 ; i[28]                                       ; i[29]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.179      ;
+; 2.958 ; i[18]                                       ; i[19]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.179      ;
+; 2.958 ; i[17]                                       ; i[18]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.179      ;
+; 2.958 ; i[8]                                        ; i[9]                                        ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.179      ;
+; 2.958 ; i[7]                                        ; i[8]                                        ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.179      ;
+; 2.966 ; i[27]                                       ; i[28]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.187      ;
+; 2.972 ; i[26]                                       ; i[27]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.193      ;
+; 2.994 ; lcd_controller:lcd_instance|state.S2        ; lcd_controller:lcd_instance|count_cmd[0]    ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.215      ;
+; 3.048 ; write_data[3]                               ; lcd_controller:lcd_instance|data_dis[3]     ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.269      ;
+; 3.051 ; i[3]                                        ; i[5]                                        ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.272      ;
+; 3.052 ; lcd_controller:lcd_instance|state.S8        ; lcd_controller:lcd_instance|state.S9        ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.273      ;
+; 3.059 ; i[16]                                       ; i[18]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.280      ;
+; 3.059 ; i[6]                                        ; i[8]                                        ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.280      ;
+; 3.060 ; i[23]                                       ; i[25]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.281      ;
+; 3.060 ; i[13]                                       ; i[15]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.281      ;
+; 3.069 ; i[28]                                       ; i[30]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.290      ;
+; 3.069 ; i[18]                                       ; i[20]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.290      ;
+; 3.069 ; i[8]                                        ; i[10]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.290      ;
+; 3.069 ; i[17]                                       ; i[19]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.290      ;
+; 3.069 ; i[7]                                        ; i[9]                                        ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.290      ;
+; 3.074 ; lcd_controller:lcd_instance|count_cmd[1]    ; lcd_controller:lcd_instance|lcd_rs          ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.295      ;
+; 3.075 ; write_data[1]                               ; lcd_controller:lcd_instance|data_dis[1]     ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.296      ;
+; 3.077 ; i[27]                                       ; i[29]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.298      ;
+; 3.083 ; write_data[5]                               ; lcd_controller:lcd_instance|data_dis[5]     ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.304      ;
+; 3.083 ; i[26]                                       ; i[28]                                       ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.304      ;
+; 3.084 ; lcd_controller:lcd_instance|count_cmd[1]    ; lcd_controller:lcd_instance|ack             ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.305      ;
+; 3.085 ; lcd_controller:lcd_instance|count_cmd[1]    ; lcd_controller:lcd_instance|state.S3        ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.306      ;
+; 3.115 ; write_data[1]                               ; write_data[1]                               ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.336      ;
+; 3.126 ; lcd_controller:lcd_instance|count_cmd[0]    ; lcd_controller:lcd_instance|lcd[7]          ; lcd_clk      ; lcd_clk     ; 0.000        ; 0.000      ; 3.347      ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'clk_slow'                                                                                                                                                        ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                   ; To Node                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.660 ; cov_detect:covid_det_instance|y_present.s2  ; cov_detect:covid_det_instance|y_present.s2  ; clk_slow     ; clk_slow    ; 0.000        ; 0.000      ; 1.881      ;
+; 1.675 ; cov_detect:covid_det_instance|y_present.s4  ; cov_detect:covid_det_instance|y_present.rst ; clk_slow     ; clk_slow    ; 0.000        ; 0.000      ; 1.896      ;
+; 2.018 ; cov_detect:covid_det_instance|y_present.rst ; cov_detect:covid_det_instance|y_present.s1  ; clk_slow     ; clk_slow    ; 0.000        ; 0.000      ; 2.239      ;
+; 2.081 ; cov_detect:covid_det_instance|y_present.s3  ; cov_detect:covid_det_instance|y_present.s4  ; clk_slow     ; clk_slow    ; 0.000        ; 0.000      ; 2.302      ;
+; 2.107 ; cov_detect:covid_det_instance|y_present.s3  ; cov_detect:covid_det_instance|y_present.s3  ; clk_slow     ; clk_slow    ; 0.000        ; 0.000      ; 2.328      ;
+; 2.126 ; cov_detect:covid_det_instance|y_present.rst ; cov_detect:covid_det_instance|y_present.rst ; clk_slow     ; clk_slow    ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; cov_detect:covid_det_instance|y_present.s1  ; cov_detect:covid_det_instance|y_present.s1  ; clk_slow     ; clk_slow    ; 0.000        ; 0.000      ; 2.347      ;
+; 2.133 ; cov_detect:covid_det_instance|y_present.s1  ; cov_detect:covid_det_instance|y_present.s2  ; clk_slow     ; clk_slow    ; 0.000        ; 0.000      ; 2.354      ;
+; 2.168 ; cov_detect:covid_det_instance|y_present.s2  ; cov_detect:covid_det_instance|y_present.s3  ; clk_slow     ; clk_slow    ; 0.000        ; 0.000      ; 2.389      ;
+; 2.240 ; cov_detect:covid_det_instance|y_present.s4  ; cov_detect:covid_det_instance|y_present.s4  ; clk_slow     ; clk_slow    ; 0.000        ; 0.000      ; 2.461      ;
++-------+---------------------------------------------+---------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 8208     ; 0        ; 0        ; 0        ;
+; lcd_clk    ; clk      ; 1        ; 1        ; 0        ; 0        ;
+; clk_slow   ; clk_slow ; 10       ; 0        ; 0        ; 0        ;
+; clk_slow   ; lcd_clk  ; 33       ; 0        ; 0        ; 0        ;
+; lcd_clk    ; lcd_clk  ; 5963     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 8208     ; 0        ; 0        ; 0        ;
+; lcd_clk    ; clk      ; 1        ; 1        ; 0        ; 0        ;
+; clk_slow   ; clk_slow ; 10       ; 0        ; 0        ; 0        ;
+; clk_slow   ; lcd_clk  ; 33       ; 0        ; 0        ; 0        ;
+; lcd_clk    ; lcd_clk  ; 5963     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 6     ; 6    ;
+; Unconstrained Input Port Paths  ; 107   ; 107  ;
+; Unconstrained Output Ports      ; 11    ; 11   ;
+; Unconstrained Output Port Paths ; 16    ; 16   ;
++---------------------------------+-------+------+
+
+
++------------------------------------------+
+; Clock Status Summary                     ;
++----------+----------+------+-------------+
+; Target   ; Clock    ; Type ; Status      ;
++----------+----------+------+-------------+
+; clk      ; clk      ; Base ; Constrained ;
+; clk_slow ; clk_slow ; Base ; Constrained ;
+; lcd_clk  ; lcd_clk  ; Base ; Constrained ;
++----------+----------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; inp[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; inp[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; inp[2]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; inp[3]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; inp[4]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; detect      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd1[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd1[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd1[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd1[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd1[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd1[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd1[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd1[7]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd_en      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd_rs      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; inp[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; inp[1]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; inp[2]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; inp[3]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; inp[4]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rst        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; detect      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd1[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd1[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd1[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd1[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd1[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd1[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd1[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd1[7]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd_en      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; lcd_rs      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Fri Apr 29 19:19:24 2022
+Info: Command: quartus_sta FSM -c DUT
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'DUT.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name lcd_clk lcd_clk
+    Info (332105): create_clock -period 1.000 -name clk clk
+    Info (332105): create_clock -period 1.000 -name clk_slow clk_slow
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -11.678
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):   -11.678            -590.985 lcd_clk 
+    Info (332119):   -11.505            -237.956 clk 
+    Info (332119):    -1.794              -8.563 clk_slow 
+Info (332146): Worst-case hold slack is -1.347
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.347              -1.347 clk 
+    Info (332119):     1.078               0.000 lcd_clk 
+    Info (332119):     1.660               0.000 clk_slow 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.289
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.289              -2.289 clk 
+    Info (332119):    -2.289              -2.289 clk_slow 
+    Info (332119):     0.234               0.000 lcd_clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4680 megabytes
+    Info: Processing ended: Fri Apr 29 19:19:25 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

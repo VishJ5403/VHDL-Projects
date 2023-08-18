@@ -1,0 +1,298 @@
+# Reading pref.tcl
+# do DUT_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {D:/Projects/final/se.VHDL}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:21:09 on Apr 30,2022
+# vcom -reportprogress 300 -93 -work work D:/Projects/final/se.VHDL 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package sign_extend
+# -- Compiling entity se6
+# -- Compiling architecture arc of se6
+# -- Compiling entity se9
+# -- Compiling architecture arc of se9
+# End time: 01:21:09 on Apr 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Projects/final/reg_16.VHDL}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:21:10 on Apr 30,2022
+# vcom -reportprogress 300 -93 -work work D:/Projects/final/reg_16.VHDL 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package reg
+# -- Compiling entity tr
+# -- Compiling architecture arc of tr
+# -- Compiling entity pc
+# -- Compiling architecture arc of pc
+# -- Compiling entity ir
+# -- Compiling architecture arc of ir
+# End time: 01:21:10 on Apr 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Projects/final/mux_3.VHDL}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:21:10 on Apr 30,2022
+# vcom -reportprogress 300 -93 -work work D:/Projects/final/mux_3.VHDL 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package mux3
+# -- Compiling entity mux_3
+# -- Compiling architecture arc of mux_3
+# End time: 01:21:10 on Apr 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Projects/final/mux_2.VHDL}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:21:10 on Apr 30,2022
+# vcom -reportprogress 300 -93 -work work D:/Projects/final/mux_2.VHDL 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package mux2
+# -- Compiling entity mux_2_16
+# -- Compiling architecture arc of mux_2_16
+# -- Compiling entity mux_2_3
+# -- Compiling architecture arc of mux_2_3
+# End time: 01:21:10 on Apr 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Projects/final/mux_1.VHDL}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:21:10 on Apr 30,2022
+# vcom -reportprogress 300 -93 -work work D:/Projects/final/mux_1.VHDL 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package mux1
+# -- Compiling entity mux_1_16
+# -- Compiling architecture arc of mux_1_16
+# -- Compiling entity mux_1_3
+# -- Compiling architecture arc of mux_1_3
+# End time: 01:21:11 on Apr 30,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Projects/final/mem.VHDL}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:21:11 on Apr 30,2022
+# vcom -reportprogress 300 -93 -work work D:/Projects/final/mem.VHDL 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package memory
+# -- Loading package NUMERIC_STD
+# -- Compiling entity mem
+# -- Compiling architecture arc of mem
+# End time: 01:21:11 on Apr 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Projects/final/ls.VHDL}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:21:11 on Apr 30,2022
+# vcom -reportprogress 300 -93 -work work D:/Projects/final/ls.VHDL 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package left_shift
+# -- Compiling entity ls7
+# -- Compiling architecture arc of ls7
+# -- Compiling entity ls1
+# -- Compiling architecture arc of ls1
+# End time: 01:21:11 on Apr 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Projects/final/fsm.VHDL}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:21:11 on Apr 30,2022
+# vcom -reportprogress 300 -93 -work work D:/Projects/final/fsm.VHDL 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package controller
+# -- Compiling entity fsm
+# -- Compiling architecture arc of fsm
+# End time: 01:21:11 on Apr 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Projects/final/check_reg.VHDL}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:21:11 on Apr 30,2022
+# vcom -reportprogress 300 -93 -work work D:/Projects/final/check_reg.VHDL 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package check_register
+# -- Compiling entity check_reg
+# -- Compiling architecture arc of check_reg
+# End time: 01:21:11 on Apr 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Projects/final/check.VHDL}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:21:12 on Apr 30,2022
+# vcom -reportprogress 300 -93 -work work D:/Projects/final/check.VHDL 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package checker
+# -- Compiling entity check
+# -- Compiling architecture arc of check
+# End time: 01:21:12 on Apr 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Projects/final/ccr.VHDL}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:21:12 on Apr 30,2022
+# vcom -reportprogress 300 -93 -work work D:/Projects/final/ccr.VHDL 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package condition_code_register
+# -- Compiling entity ccr
+# -- Compiling architecture arc of ccr
+# End time: 01:21:12 on Apr 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Projects/final/alu.VHDL}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:21:12 on Apr 30,2022
+# vcom -reportprogress 300 -93 -work work D:/Projects/final/alu.VHDL 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package arithmetic_logical_unit
+# -- Compiling entity alu
+# -- Compiling architecture arc of alu
+# End time: 01:21:12 on Apr 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Projects/final/rf.VHDL}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:21:12 on Apr 30,2022
+# vcom -reportprogress 300 -93 -work work D:/Projects/final/rf.VHDL 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package register_file
+# -- Loading package NUMERIC_STD
+# -- Loading package checker
+# -- Loading package check_register
+# -- Loading package condition_code_register
+# -- Loading package reg
+# -- Loading package register_file
+# -- Loading package left_shift
+# -- Loading package sign_extend
+# -- Loading package arithmetic_logical_unit
+# -- Loading package memory
+# -- Compiling entity rf
+# -- Compiling architecture arc of rf
+# End time: 01:21:12 on Apr 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Projects/final/data_path.VHDL}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:21:12 on Apr 30,2022
+# vcom -reportprogress 300 -93 -work work D:/Projects/final/data_path.VHDL 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package DP
+# -- Loading package checker
+# -- Loading package check_register
+# -- Loading package condition_code_register
+# -- Loading package reg
+# -- Loading package register_file
+# -- Loading package left_shift
+# -- Loading package sign_extend
+# -- Loading package arithmetic_logical_unit
+# -- Loading package memory
+# -- Loading package mux1
+# -- Loading package mux2
+# -- Loading package mux3
+# -- Compiling entity data_path
+# -- Compiling architecture arc of data_path
+# End time: 01:21:12 on Apr 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {D:/Projects/final/DUT.VHDL}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:21:13 on Apr 30,2022
+# vcom -reportprogress 300 -93 -work work D:/Projects/final/DUT.VHDL 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package DP
+# -- Loading package NUMERIC_STD
+# -- Loading package controller
+# -- Compiling entity DUT
+# -- Compiling architecture arc of DUT
+# End time: 01:21:13 on Apr 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {D:/Projects/final/test.VHDL}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 01:21:13 on Apr 30,2022
+# vcom -reportprogress 300 -93 -work work D:/Projects/final/test.VHDL 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity test
+# -- Compiling architecture arc of test
+# ** Warning: D:/Projects/final/test.VHDL(82): (vcom-1090) Possible infinite loop: Process contains no WAIT statement.
+# End time: 01:21:13 on Apr 30,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs="+acc"  test
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs=""+acc"" test 
+# Start time: 01:21:14 on Apr 30,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.test(arc)
+# Loading work.dp
+# Loading ieee.numeric_std(body)
+# Loading work.controller
+# Loading work.dut(arc)
+# Loading work.fsm(arc)
+# Loading work.checker
+# Loading work.check_register
+# Loading work.condition_code_register
+# Loading work.reg
+# Loading work.register_file
+# Loading work.left_shift
+# Loading work.sign_extend
+# Loading work.arithmetic_logical_unit
+# Loading work.memory
+# Loading work.mux1
+# Loading work.mux2
+# Loading work.mux3
+# Loading work.data_path(arc)
+# Loading work.pc(arc)
+# Loading work.mux_1_16(arc)
+# Loading work.mem(arc)
+# Loading work.ir(arc)
+# Loading work.check(arc)
+# Loading work.check_reg(arc)
+# Loading work.se9(arc)
+# Loading work.mux_1_3(arc)
+# Loading work.mux_2_3(arc)
+# Loading work.ls7(arc)
+# Loading work.mux_2_16(arc)
+# Loading work.se6(arc)
+# Loading work.rf(arc)
+# Loading work.tr(arc)
+# Loading work.ls1(arc)
+# Loading work.mux_3(arc)
+# Loading work.alu(arc)
+# Loading work.ccr(arc)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Break key hit
+# Break in Process rst at D:/Projects/final/test.VHDL line 82
+# End time: 01:25:22 on Apr 30,2022, Elapsed time: 0:04:08
+# Errors: 0, Warnings: 0

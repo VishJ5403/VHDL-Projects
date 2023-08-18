@@ -1,0 +1,34 @@
+|DUT
+input_vector[0] => Minvow:add_instance.D
+input_vector[1] => Minvow:add_instance.C
+input_vector[2] => Minvow:add_instance.B
+input_vector[3] => Minvow:add_instance.A
+output_vector[0] << Minvow:add_instance.Y
+
+
+|DUT|Minvow:add_instance
+A => AND_2:a1.A
+B => AND_2:a1.B
+C => XOR_2:x1.B
+D => NOR_2:n1.B
+Y <= NOR_2:n1.Y
+
+
+|DUT|Minvow:add_instance|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Minvow:add_instance|XOR_2:x1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Minvow:add_instance|NOR_2:n1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

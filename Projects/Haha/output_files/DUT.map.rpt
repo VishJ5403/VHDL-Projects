@@ -1,0 +1,575 @@
+Analysis & Synthesis report for DUT
+Sun May 01 20:24:59 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |DUT|fsm:FSM0|y_present
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Port Connectivity Checks: "data_path:DATA_PATH0|alu:ALU0"
+ 13. Port Connectivity Checks: "data_path:DATA_PATH0|s2:s20"
+ 14. Port Connectivity Checks: "data_path:DATA_PATH0|s1:s10"
+ 15. Port Connectivity Checks: "data_path:DATA_PATH0"
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Sun May 01 20:24:59 2022       ;
+; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name               ; DUT                                         ;
+; Top-level Entity Name       ; DUT                                         ;
+; Family                      ; MAX V                                       ;
+; Total logic elements        ; 0                                           ;
+; Total pins                  ; 19                                          ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
++-----------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 5M1270ZT144C5      ;                    ;
+; Top-level entity name                                            ; DUT                ; DUT                ;
+; Family name                                                      ; MAX V              ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                           ;
++----------------------------------+-----------------+-----------------+---------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path    ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------+---------+
+; se.VHDL                          ; yes             ; User VHDL File  ; D:/Projects/Haha/se.VHDL        ;         ;
+; rf.VHDL                          ; yes             ; User VHDL File  ; D:/Projects/Haha/rf.VHDL        ;         ;
+; reg_16.VHDL                      ; yes             ; User VHDL File  ; D:/Projects/Haha/reg_16.VHDL    ;         ;
+; mux_3.VHDL                       ; yes             ; User VHDL File  ; D:/Projects/Haha/mux_3.VHDL     ;         ;
+; mux_2.VHDL                       ; yes             ; User VHDL File  ; D:/Projects/Haha/mux_2.VHDL     ;         ;
+; mux_1.VHDL                       ; yes             ; User VHDL File  ; D:/Projects/Haha/mux_1.VHDL     ;         ;
+; ls.VHDL                          ; yes             ; User VHDL File  ; D:/Projects/Haha/ls.VHDL        ;         ;
+; fsm.VHDL                         ; yes             ; User VHDL File  ; D:/Projects/Haha/fsm.VHDL       ;         ;
+; DUT.VHDL                         ; yes             ; User VHDL File  ; D:/Projects/Haha/DUT.VHDL       ;         ;
+; data_path.VHDL                   ; yes             ; User VHDL File  ; D:/Projects/Haha/data_path.VHDL ;         ;
+; check_reg.VHDL                   ; yes             ; User VHDL File  ; D:/Projects/Haha/check_reg.VHDL ;         ;
+; check.VHDL                       ; yes             ; User VHDL File  ; D:/Projects/Haha/check.VHDL     ;         ;
+; ccr.VHDL                         ; yes             ; User VHDL File  ; D:/Projects/Haha/ccr.VHDL       ;         ;
+; alu.VHDL                         ; yes             ; User VHDL File  ; D:/Projects/Haha/alu.VHDL       ;         ;
+; mem_dm.vhdl                      ; yes             ; User VHDL File  ; D:/Projects/Haha/mem_dm.vhdl    ;         ;
+; mem_im.vhdl                      ; yes             ; User VHDL File  ; D:/Projects/Haha/mem_im.vhdl    ;         ;
+; reg_66.vhdl                      ; yes             ; User VHDL File  ; D:/Projects/Haha/reg_66.vhdl    ;         ;
+; reg_86.vhdl                      ; yes             ; User VHDL File  ; D:/Projects/Haha/reg_86.vhdl    ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 0     ;
+;     -- Combinational with no register       ; 0     ;
+;     -- Register only                        ; 0     ;
+;     -- Combinational with a register        ; 0     ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- 2 input functions                    ; 0     ;
+;     -- 1 input functions                    ; 0     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 0     ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+; I/O pins                                    ; 19    ;
++---------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
+; |DUT                       ; 0 (0)       ; 0            ; 0          ; 19   ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT                ; DUT         ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |DUT|fsm:FSM0|y_present                                                                                                                                                                                                                                                ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+; Name          ; y_present.s22 ; y_present.s20 ; y_present.s18 ; y_present.s17 ; y_present.s16 ; y_present.s15 ; y_present.s14 ; y_present.s13 ; y_present.s12 ; y_present.s10 ; y_present.s7 ; y_present.s5 ; y_present.s4 ; y_present.s3 ; y_present.s2 ; y_present.s1 ; y_present.s0 ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+; y_present.s0  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
+; y_present.s1  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 1            ;
+; y_present.s2  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 1            ;
+; y_present.s3  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 1            ;
+; y_present.s4  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 1            ;
+; y_present.s5  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; y_present.s7  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; y_present.s10 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; y_present.s12 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; y_present.s13 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; y_present.s14 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; y_present.s15 ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; y_present.s16 ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; y_present.s17 ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; y_present.s18 ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; y_present.s20 ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; y_present.s22 ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+
+
++------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                 ;
++-------------------------------------------+----------------------------------------+
+; Register name                             ; Reason for Removal                     ;
++-------------------------------------------+----------------------------------------+
+; data_path:DATA_PATH0|ir:IR0|Y[0,1,12..15] ; Stuck at GND due to stuck port data_in ;
+; fsm:FSM0|y_present.s14                    ; Lost fanout                            ;
+; fsm:FSM0|y_present.s22                    ; Lost fanout                            ;
+; fsm:FSM0|y_present.s2                     ; Stuck at GND due to stuck port data_in ;
+; fsm:FSM0|y_present.s5                     ; Stuck at GND due to stuck port data_in ;
+; fsm:FSM0|y_present.s10                    ; Stuck at GND due to stuck port data_in ;
+; fsm:FSM0|y_present.s12                    ; Stuck at GND due to stuck port data_in ;
+; fsm:FSM0|y_present.s13                    ; Stuck at GND due to stuck port data_in ;
+; fsm:FSM0|y_present.s15                    ; Stuck at GND due to stuck port data_in ;
+; fsm:FSM0|y_present.s17                    ; Stuck at GND due to stuck port data_in ;
+; fsm:FSM0|y_present.s18                    ; Stuck at GND due to stuck port data_in ;
+; fsm:FSM0|y_present.s20                    ; Stuck at GND due to stuck port data_in ;
+; fsm:FSM0|y_present.s0                     ; Lost fanout                            ;
+; fsm:FSM0|y_present.s1                     ; Lost fanout                            ;
+; fsm:FSM0|y_present.s3                     ; Lost fanout                            ;
+; fsm:FSM0|y_present.s4                     ; Lost fanout                            ;
+; fsm:FSM0|y_present.s7                     ; Lost fanout                            ;
+; fsm:FSM0|y_present.s16                    ; Lost fanout                            ;
+; Total Number of Removed Registers = 23    ;                                        ;
++-------------------------------------------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                 ;
++------------------------+---------------------------+----------------------------------------+
+; Register name          ; Reason for Removal        ; Registers Removed due to This Register ;
++------------------------+---------------------------+----------------------------------------+
+; fsm:FSM0|y_present.s2  ; Stuck at GND              ; fsm:FSM0|y_present.s1                  ;
+;                        ; due to stuck port data_in ;                                        ;
+; fsm:FSM0|y_present.s5  ; Stuck at GND              ; fsm:FSM0|y_present.s7                  ;
+;                        ; due to stuck port data_in ;                                        ;
+; fsm:FSM0|y_present.s10 ; Stuck at GND              ; fsm:FSM0|y_present.s3                  ;
+;                        ; due to stuck port data_in ;                                        ;
+; fsm:FSM0|y_present.s0  ; Lost Fanouts              ; fsm:FSM0|y_present.s4                  ;
++------------------------+---------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "data_path:DATA_PATH0|alu:ALU0"                                                      ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; y    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; c    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; z    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "data_path:DATA_PATH0|s2:s20"                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; y[83..68] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "data_path:DATA_PATH0|s1:s10"                                                           ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; y[2..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "data_path:DATA_PATH0"                                                                   ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; i[11..2] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sun May 01 20:24:46 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ha -c DUT
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file test.vhdl
+    Info (12022): Found design unit 1: test-arc File: D:/Projects/Haha/test.VHDL Line: 9
+    Info (12023): Found entity 1: test File: D:/Projects/Haha/test.VHDL Line: 6
+Info (12021): Found 5 design units, including 2 entities, in source file se.vhdl
+    Info (12022): Found design unit 1: sign_extend File: D:/Projects/Haha/se.VHDL Line: 4
+    Info (12022): Found design unit 2: se6-arc File: D:/Projects/Haha/se.VHDL Line: 21
+    Info (12022): Found design unit 3: se9-arc File: D:/Projects/Haha/se.VHDL Line: 40
+    Info (12023): Found entity 1: se6 File: D:/Projects/Haha/se.VHDL Line: 17
+    Info (12023): Found entity 2: se9 File: D:/Projects/Haha/se.VHDL Line: 36
+Info (12021): Found 3 design units, including 1 entities, in source file rf.vhdl
+    Info (12022): Found design unit 1: register_file File: D:/Projects/Haha/rf.VHDL Line: 4
+    Info (12022): Found design unit 2: rf-arc File: D:/Projects/Haha/rf.VHDL Line: 18
+    Info (12023): Found entity 1: rf File: D:/Projects/Haha/rf.VHDL Line: 14
+Info (12021): Found 7 design units, including 3 entities, in source file reg_16.vhdl
+    Info (12022): Found design unit 1: reg File: D:/Projects/Haha/reg_16.VHDL Line: 4
+    Info (12022): Found design unit 2: tr-arc File: D:/Projects/Haha/reg_16.VHDL Line: 25
+    Info (12022): Found design unit 3: pc-arc File: D:/Projects/Haha/reg_16.VHDL Line: 42
+    Info (12022): Found design unit 4: ir-arc File: D:/Projects/Haha/reg_16.VHDL Line: 59
+    Info (12023): Found entity 1: tr File: D:/Projects/Haha/reg_16.VHDL Line: 21
+    Info (12023): Found entity 2: pc File: D:/Projects/Haha/reg_16.VHDL Line: 38
+    Info (12023): Found entity 3: ir File: D:/Projects/Haha/reg_16.VHDL Line: 55
+Info (12021): Found 3 design units, including 1 entities, in source file mux_3.vhdl
+    Info (12022): Found design unit 1: mux3 File: D:/Projects/Haha/mux_3.VHDL Line: 4
+    Info (12022): Found design unit 2: mux_3-arc File: D:/Projects/Haha/mux_3.VHDL Line: 17
+    Info (12023): Found entity 1: mux_3 File: D:/Projects/Haha/mux_3.VHDL Line: 13
+Info (12021): Found 5 design units, including 2 entities, in source file mux_2.vhdl
+    Info (12022): Found design unit 1: mux2 File: D:/Projects/Haha/mux_2.VHDL Line: 4
+    Info (12022): Found design unit 2: mux_2_16-arc File: D:/Projects/Haha/mux_2.VHDL Line: 21
+    Info (12022): Found design unit 3: mux_2_3-arc File: D:/Projects/Haha/mux_2.VHDL Line: 44
+    Info (12023): Found entity 1: mux_2_16 File: D:/Projects/Haha/mux_2.VHDL Line: 17
+    Info (12023): Found entity 2: mux_2_3 File: D:/Projects/Haha/mux_2.VHDL Line: 40
+Info (12021): Found 5 design units, including 2 entities, in source file mux_1.vhdl
+    Info (12022): Found design unit 1: mux1 File: D:/Projects/Haha/mux_1.VHDL Line: 4
+    Info (12022): Found design unit 2: mux_1_16-arc File: D:/Projects/Haha/mux_1.VHDL Line: 21
+    Info (12022): Found design unit 3: mux_1_3-arc File: D:/Projects/Haha/mux_1.VHDL Line: 40
+    Info (12023): Found entity 1: mux_1_16 File: D:/Projects/Haha/mux_1.VHDL Line: 17
+    Info (12023): Found entity 2: mux_1_3 File: D:/Projects/Haha/mux_1.VHDL Line: 36
+Info (12021): Found 5 design units, including 2 entities, in source file ls.vhdl
+    Info (12022): Found design unit 1: left_shift File: D:/Projects/Haha/ls.VHDL Line: 4
+    Info (12022): Found design unit 2: ls7-arc File: D:/Projects/Haha/ls.VHDL Line: 21
+    Info (12022): Found design unit 3: ls1-arc File: D:/Projects/Haha/ls.VHDL Line: 33
+    Info (12023): Found entity 1: ls7 File: D:/Projects/Haha/ls.VHDL Line: 17
+    Info (12023): Found entity 2: ls1 File: D:/Projects/Haha/ls.VHDL Line: 29
+Info (12021): Found 3 design units, including 1 entities, in source file fsm.vhdl
+    Info (12022): Found design unit 1: controller File: D:/Projects/Haha/fsm.VHDL Line: 5
+    Info (12022): Found design unit 2: fsm-arc File: D:/Projects/Haha/fsm.VHDL Line: 19
+    Info (12023): Found entity 1: fsm File: D:/Projects/Haha/fsm.VHDL Line: 15
+Info (12021): Found 2 design units, including 1 entities, in source file dut.vhdl
+    Info (12022): Found design unit 1: DUT-arc File: D:/Projects/Haha/DUT.VHDL Line: 11
+    Info (12023): Found entity 1: DUT File: D:/Projects/Haha/DUT.VHDL Line: 7
+Info (12021): Found 3 design units, including 1 entities, in source file demux_3.vhdl
+    Info (12022): Found design unit 1: demux File: D:/Projects/Haha/demux_3.VHDL Line: 4
+    Info (12022): Found design unit 2: demux_3-arc File: D:/Projects/Haha/demux_3.VHDL Line: 17
+    Info (12023): Found entity 1: demux_3 File: D:/Projects/Haha/demux_3.VHDL Line: 13
+Info (12021): Found 3 design units, including 1 entities, in source file data_path.vhdl
+    Info (12022): Found design unit 1: DP File: D:/Projects/Haha/data_path.VHDL Line: 4
+    Info (12022): Found design unit 2: data_path-arc File: D:/Projects/Haha/data_path.VHDL Line: 33
+    Info (12023): Found entity 1: data_path File: D:/Projects/Haha/data_path.VHDL Line: 29
+Info (12021): Found 3 design units, including 1 entities, in source file check_reg.vhdl
+    Info (12022): Found design unit 1: check_register File: D:/Projects/Haha/check_reg.VHDL Line: 4
+    Info (12022): Found design unit 2: check_reg-arc File: D:/Projects/Haha/check_reg.VHDL Line: 17
+    Info (12023): Found entity 1: check_reg File: D:/Projects/Haha/check_reg.VHDL Line: 13
+Info (12021): Found 3 design units, including 1 entities, in source file check.vhdl
+    Info (12022): Found design unit 1: checker File: D:/Projects/Haha/check.VHDL Line: 4
+    Info (12022): Found design unit 2: check-arc File: D:/Projects/Haha/check.VHDL Line: 19
+    Info (12023): Found entity 1: check File: D:/Projects/Haha/check.VHDL Line: 14
+Info (12021): Found 3 design units, including 1 entities, in source file ccr.vhdl
+    Info (12022): Found design unit 1: condition_code_register File: D:/Projects/Haha/ccr.VHDL Line: 4
+    Info (12022): Found design unit 2: ccr-arc File: D:/Projects/Haha/ccr.VHDL Line: 17
+    Info (12023): Found entity 1: ccr File: D:/Projects/Haha/ccr.VHDL Line: 13
+Info (12021): Found 3 design units, including 1 entities, in source file alu.vhdl
+    Info (12022): Found design unit 1: arithmetic_logical_unit File: D:/Projects/Haha/alu.VHDL Line: 4
+    Info (12022): Found design unit 2: alu-arc File: D:/Projects/Haha/alu.VHDL Line: 17
+    Info (12023): Found entity 1: alu File: D:/Projects/Haha/alu.VHDL Line: 13
+Info (12021): Found 3 design units, including 1 entities, in source file adder.vhdl
+    Info (12022): Found design unit 1: ADDER File: D:/Projects/Haha/adder.vhdl Line: 4
+    Info (12022): Found design unit 2: addr-arc File: D:/Projects/Haha/adder.vhdl Line: 17
+    Info (12023): Found entity 1: addr File: D:/Projects/Haha/adder.vhdl Line: 13
+Info (12021): Found 3 design units, including 1 entities, in source file mem_dm.vhdl
+    Info (12022): Found design unit 1: memory_dm File: D:/Projects/Haha/mem_dm.vhdl Line: 4
+    Info (12022): Found design unit 2: mem_dm-arc File: D:/Projects/Haha/mem_dm.vhdl Line: 18
+    Info (12023): Found entity 1: mem_dm File: D:/Projects/Haha/mem_dm.vhdl Line: 14
+Info (12021): Found 3 design units, including 1 entities, in source file mem_im.vhdl
+    Info (12022): Found design unit 1: memory_im File: D:/Projects/Haha/mem_im.vhdl Line: 4
+    Info (12022): Found design unit 2: mem_im-arc File: D:/Projects/Haha/mem_im.vhdl Line: 18
+    Info (12023): Found entity 1: mem_im File: D:/Projects/Haha/mem_im.vhdl Line: 14
+Info (12021): Found 3 design units, including 1 entities, in source file reg_66.vhdl
+    Info (12022): Found design unit 1: reg_66 File: D:/Projects/Haha/reg_66.vhdl Line: 4
+    Info (12022): Found design unit 2: s1-arc File: D:/Projects/Haha/reg_66.vhdl Line: 18
+    Info (12023): Found entity 1: s1 File: D:/Projects/Haha/reg_66.vhdl Line: 14
+Info (12021): Found 3 design units, including 1 entities, in source file reg_86.vhdl
+    Info (12022): Found design unit 1: reg_86 File: D:/Projects/Haha/reg_86.vhdl Line: 4
+    Info (12022): Found design unit 2: s2-arc File: D:/Projects/Haha/reg_86.vhdl Line: 18
+    Info (12023): Found entity 1: s2 File: D:/Projects/Haha/reg_86.vhdl Line: 14
+Info (12127): Elaborating entity "DUT" for the top level hierarchy
+Info (12128): Elaborating entity "fsm" for hierarchy "fsm:FSM0" File: D:/Projects/Haha/DUT.VHDL Line: 16
+Info (12128): Elaborating entity "data_path" for hierarchy "data_path:DATA_PATH0" File: D:/Projects/Haha/DUT.VHDL Line: 17
+Warning (10036): Verilog HDL or VHDL warning at data_path.VHDL(34): object "pcw" assigned a value but never read File: D:/Projects/Haha/data_path.VHDL Line: 34
+Warning (10036): Verilog HDL or VHDL warning at data_path.VHDL(34): object "mw" assigned a value but never read File: D:/Projects/Haha/data_path.VHDL Line: 34
+Warning (10036): Verilog HDL or VHDL warning at data_path.VHDL(34): object "mr" assigned a value but never read File: D:/Projects/Haha/data_path.VHDL Line: 34
+Warning (10036): Verilog HDL or VHDL warning at data_path.VHDL(34): object "mem_a" assigned a value but never read File: D:/Projects/Haha/data_path.VHDL Line: 34
+Warning (10036): Verilog HDL or VHDL warning at data_path.VHDL(34): object "rf_a1" assigned a value but never read File: D:/Projects/Haha/data_path.VHDL Line: 34
+Warning (10036): Verilog HDL or VHDL warning at data_path.VHDL(34): object "t1" assigned a value but never read File: D:/Projects/Haha/data_path.VHDL Line: 34
+Warning (10036): Verilog HDL or VHDL warning at data_path.VHDL(34): object "t3" assigned a value but never read File: D:/Projects/Haha/data_path.VHDL Line: 34
+Warning (10036): Verilog HDL or VHDL warning at data_path.VHDL(35): object "rf_a2" assigned a value but never read File: D:/Projects/Haha/data_path.VHDL Line: 35
+Warning (10036): Verilog HDL or VHDL warning at data_path.VHDL(35): object "rf_a3" assigned a value but never read File: D:/Projects/Haha/data_path.VHDL Line: 35
+Warning (10036): Verilog HDL or VHDL warning at data_path.VHDL(35): object "rf_d3" assigned a value but never read File: D:/Projects/Haha/data_path.VHDL Line: 35
+Warning (10036): Verilog HDL or VHDL warning at data_path.VHDL(35): object "alu_B" assigned a value but never read File: D:/Projects/Haha/data_path.VHDL Line: 35
+Warning (10036): Verilog HDL or VHDL warning at data_path.VHDL(35): object "alu_OP" assigned a value but never read File: D:/Projects/Haha/data_path.VHDL Line: 35
+Warning (10036): Verilog HDL or VHDL warning at data_path.VHDL(36): object "alu_A" assigned a value but never read File: D:/Projects/Haha/data_path.VHDL Line: 36
+Warning (10036): Verilog HDL or VHDL warning at data_path.VHDL(37): object "aluc" assigned a value but never read File: D:/Projects/Haha/data_path.VHDL Line: 37
+Warning (10541): VHDL Signal Declaration warning at data_path.VHDL(37): used implicit default value for signal "pcy" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Projects/Haha/data_path.VHDL Line: 37
+Warning (10541): VHDL Signal Declaration warning at data_path.VHDL(37): used implicit default value for signal "rfd3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Projects/Haha/data_path.VHDL Line: 37
+Warning (10541): VHDL Signal Declaration warning at data_path.VHDL(38): used implicit default value for signal "ctf" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Projects/Haha/data_path.VHDL Line: 38
+Warning (10541): VHDL Signal Declaration warning at data_path.VHDL(38): used implicit default value for signal "chf" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Projects/Haha/data_path.VHDL Line: 38
+Warning (10036): Verilog HDL or VHDL warning at data_path.VHDL(38): object "c" assigned a value but never read File: D:/Projects/Haha/data_path.VHDL Line: 38
+Warning (10036): Verilog HDL or VHDL warning at data_path.VHDL(38): object "z" assigned a value but never read File: D:/Projects/Haha/data_path.VHDL Line: 38
+Warning (10541): VHDL Signal Declaration warning at data_path.VHDL(38): used implicit default value for signal "cf" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Projects/Haha/data_path.VHDL Line: 38
+Warning (10541): VHDL Signal Declaration warning at data_path.VHDL(38): used implicit default value for signal "zf" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Projects/Haha/data_path.VHDL Line: 38
+Warning (10541): VHDL Signal Declaration warning at data_path.VHDL(39): used implicit default value for signal "rfa3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Projects/Haha/data_path.VHDL Line: 39
+Warning (10492): VHDL Process Statement warning at data_path.VHDL(143): signal "s2y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Projects/Haha/data_path.VHDL Line: 143
+Warning (10492): VHDL Process Statement warning at data_path.VHDL(144): signal "s2y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Projects/Haha/data_path.VHDL Line: 144
+Warning (10492): VHDL Process Statement warning at data_path.VHDL(145): signal "s2y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Projects/Haha/data_path.VHDL Line: 145
+Warning (10492): VHDL Process Statement warning at data_path.VHDL(146): signal "s2y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Projects/Haha/data_path.VHDL Line: 146
+Warning (10492): VHDL Process Statement warning at data_path.VHDL(147): signal "s2y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Projects/Haha/data_path.VHDL Line: 147
+Warning (10492): VHDL Process Statement warning at data_path.VHDL(148): signal "s2y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Projects/Haha/data_path.VHDL Line: 148
+Warning (10492): VHDL Process Statement warning at data_path.VHDL(149): signal "s2y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Projects/Haha/data_path.VHDL Line: 149
+Warning (10492): VHDL Process Statement warning at data_path.VHDL(150): signal "s2y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Projects/Haha/data_path.VHDL Line: 150
+Warning (10492): VHDL Process Statement warning at data_path.VHDL(151): signal "s2y" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Projects/Haha/data_path.VHDL Line: 151
+Warning (10631): VHDL Process Statement warning at data_path.VHDL(141): inferring latch(es) for signal or variable "alua", which holds its previous value in one or more paths through the process File: D:/Projects/Haha/data_path.VHDL Line: 141
+Warning (10631): VHDL Process Statement warning at data_path.VHDL(141): inferring latch(es) for signal or variable "alub", which holds its previous value in one or more paths through the process File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alub[0]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alub[1]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alub[2]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alub[3]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alub[4]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alub[5]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alub[6]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alub[7]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alub[8]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alub[9]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alub[10]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alub[11]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alub[12]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alub[13]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alub[14]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alub[15]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alua[0]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alua[1]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alua[2]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alua[3]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alua[4]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alua[5]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alua[6]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alua[7]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alua[8]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alua[9]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alua[10]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alua[11]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alua[12]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alua[13]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alua[14]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (10041): Inferred latch for "alua[15]" at data_path.VHDL(141) File: D:/Projects/Haha/data_path.VHDL Line: 141
+Info (12128): Elaborating entity "mem_im" for hierarchy "data_path:DATA_PATH0|mem_im:MEM1" File: D:/Projects/Haha/data_path.VHDL Line: 95
+Warning (10541): VHDL Signal Declaration warning at mem_im.vhdl(20): used implicit default value for signal "m" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: D:/Projects/Haha/mem_im.vhdl Line: 20
+Warning (10492): VHDL Process Statement warning at mem_im.vhdl(32): signal "m" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Projects/Haha/mem_im.vhdl Line: 32
+Info (12128): Elaborating entity "ir" for hierarchy "data_path:DATA_PATH0|ir:IR0" File: D:/Projects/Haha/data_path.VHDL Line: 96
+Warning (10492): VHDL Process Statement warning at reg_16.VHDL(63): signal "irw" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Projects/Haha/reg_16.VHDL Line: 63
+Info (12128): Elaborating entity "s1" for hierarchy "data_path:DATA_PATH0|s1:s10" File: D:/Projects/Haha/data_path.VHDL Line: 97
+Info (12128): Elaborating entity "s2" for hierarchy "data_path:DATA_PATH0|s2:s20" File: D:/Projects/Haha/data_path.VHDL Line: 98
+Info (12128): Elaborating entity "se9" for hierarchy "data_path:DATA_PATH0|se9:SE90" File: D:/Projects/Haha/data_path.VHDL Line: 102
+Info (12128): Elaborating entity "ls7" for hierarchy "data_path:DATA_PATH0|ls7:LS70" File: D:/Projects/Haha/data_path.VHDL Line: 106
+Info (12128): Elaborating entity "se6" for hierarchy "data_path:DATA_PATH0|se6:SE60" File: D:/Projects/Haha/data_path.VHDL Line: 108
+Info (12128): Elaborating entity "rf" for hierarchy "data_path:DATA_PATH0|rf:RF0" File: D:/Projects/Haha/data_path.VHDL Line: 109
+Warning (10492): VHDL Process Statement warning at rf.VHDL(33): signal "r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Projects/Haha/rf.VHDL Line: 33
+Warning (10492): VHDL Process Statement warning at rf.VHDL(34): signal "r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Projects/Haha/rf.VHDL Line: 34
+Info (12128): Elaborating entity "alu" for hierarchy "data_path:DATA_PATH0|alu:ALU0" File: D:/Projects/Haha/data_path.VHDL Line: 116
+Warning (10631): VHDL Process Statement warning at alu.VHDL(33): inferring latch(es) for signal or variable "Y", which holds its previous value in one or more paths through the process File: D:/Projects/Haha/alu.VHDL Line: 33
+Warning (10631): VHDL Process Statement warning at alu.VHDL(33): inferring latch(es) for signal or variable "C", which holds its previous value in one or more paths through the process File: D:/Projects/Haha/alu.VHDL Line: 33
+Warning (10631): VHDL Process Statement warning at alu.VHDL(33): inferring latch(es) for signal or variable "Z", which holds its previous value in one or more paths through the process File: D:/Projects/Haha/alu.VHDL Line: 33
+Info (10041): Inferred latch for "Z" at alu.VHDL(33) File: D:/Projects/Haha/alu.VHDL Line: 33
+Info (10041): Inferred latch for "C" at alu.VHDL(33) File: D:/Projects/Haha/alu.VHDL Line: 33
+Info (10041): Inferred latch for "Y[0]" at alu.VHDL(33) File: D:/Projects/Haha/alu.VHDL Line: 33
+Info (10041): Inferred latch for "Y[1]" at alu.VHDL(33) File: D:/Projects/Haha/alu.VHDL Line: 33
+Info (10041): Inferred latch for "Y[2]" at alu.VHDL(33) File: D:/Projects/Haha/alu.VHDL Line: 33
+Info (10041): Inferred latch for "Y[3]" at alu.VHDL(33) File: D:/Projects/Haha/alu.VHDL Line: 33
+Info (10041): Inferred latch for "Y[4]" at alu.VHDL(33) File: D:/Projects/Haha/alu.VHDL Line: 33
+Info (10041): Inferred latch for "Y[5]" at alu.VHDL(33) File: D:/Projects/Haha/alu.VHDL Line: 33
+Info (10041): Inferred latch for "Y[6]" at alu.VHDL(33) File: D:/Projects/Haha/alu.VHDL Line: 33
+Info (10041): Inferred latch for "Y[7]" at alu.VHDL(33) File: D:/Projects/Haha/alu.VHDL Line: 33
+Info (10041): Inferred latch for "Y[8]" at alu.VHDL(33) File: D:/Projects/Haha/alu.VHDL Line: 33
+Info (10041): Inferred latch for "Y[9]" at alu.VHDL(33) File: D:/Projects/Haha/alu.VHDL Line: 33
+Info (10041): Inferred latch for "Y[10]" at alu.VHDL(33) File: D:/Projects/Haha/alu.VHDL Line: 33
+Info (10041): Inferred latch for "Y[11]" at alu.VHDL(33) File: D:/Projects/Haha/alu.VHDL Line: 33
+Info (10041): Inferred latch for "Y[12]" at alu.VHDL(33) File: D:/Projects/Haha/alu.VHDL Line: 33
+Info (10041): Inferred latch for "Y[13]" at alu.VHDL(33) File: D:/Projects/Haha/alu.VHDL Line: 33
+Info (10041): Inferred latch for "Y[14]" at alu.VHDL(33) File: D:/Projects/Haha/alu.VHDL Line: 33
+Info (10041): Inferred latch for "Y[15]" at alu.VHDL(33) File: D:/Projects/Haha/alu.VHDL Line: 33
+Info (17049): 8 registers lost all their fanouts during netlist optimizations.
+Warning (21074): Design contains 19 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "I[0]" File: D:/Projects/Haha/DUT.VHDL Line: 8
+    Warning (15610): No output dependent on input pin "I[1]" File: D:/Projects/Haha/DUT.VHDL Line: 8
+    Warning (15610): No output dependent on input pin "I[2]" File: D:/Projects/Haha/DUT.VHDL Line: 8
+    Warning (15610): No output dependent on input pin "I[3]" File: D:/Projects/Haha/DUT.VHDL Line: 8
+    Warning (15610): No output dependent on input pin "I[4]" File: D:/Projects/Haha/DUT.VHDL Line: 8
+    Warning (15610): No output dependent on input pin "I[5]" File: D:/Projects/Haha/DUT.VHDL Line: 8
+    Warning (15610): No output dependent on input pin "I[6]" File: D:/Projects/Haha/DUT.VHDL Line: 8
+    Warning (15610): No output dependent on input pin "I[7]" File: D:/Projects/Haha/DUT.VHDL Line: 8
+    Warning (15610): No output dependent on input pin "I[8]" File: D:/Projects/Haha/DUT.VHDL Line: 8
+    Warning (15610): No output dependent on input pin "I[9]" File: D:/Projects/Haha/DUT.VHDL Line: 8
+    Warning (15610): No output dependent on input pin "I[10]" File: D:/Projects/Haha/DUT.VHDL Line: 8
+    Warning (15610): No output dependent on input pin "I[11]" File: D:/Projects/Haha/DUT.VHDL Line: 8
+    Warning (15610): No output dependent on input pin "I[12]" File: D:/Projects/Haha/DUT.VHDL Line: 8
+    Warning (15610): No output dependent on input pin "I[13]" File: D:/Projects/Haha/DUT.VHDL Line: 8
+    Warning (15610): No output dependent on input pin "I[14]" File: D:/Projects/Haha/DUT.VHDL Line: 8
+    Warning (15610): No output dependent on input pin "I[15]" File: D:/Projects/Haha/DUT.VHDL Line: 8
+    Warning (15610): No output dependent on input pin "Iw" File: D:/Projects/Haha/DUT.VHDL Line: 8
+    Warning (15610): No output dependent on input pin "iclk" File: D:/Projects/Haha/DUT.VHDL Line: 8
+    Warning (15610): No output dependent on input pin "clk" File: D:/Projects/Haha/DUT.VHDL Line: 8
+Info (21057): Implemented 19 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 19 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 63 warnings
+    Info: Peak virtual memory: 4762 megabytes
+    Info: Processing ended: Sun May 01 20:24:59 2022
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:32
+
+

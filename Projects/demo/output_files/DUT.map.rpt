@@ -1,0 +1,454 @@
+Analysis & Synthesis report for DUT
+Sun Apr 17 17:49:08 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |fsm|y_present
+  9. User-Specified and Inferred Latches
+ 10. General Register Statistics
+ 11. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Sun Apr 17 17:49:08 2022       ;
+; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name               ; DUT                                         ;
+; Top-level Entity Name       ; fsm                                         ;
+; Family                      ; MAX V                                       ;
+; Total logic elements        ; 115                                         ;
+; Total pins                  ; 45                                          ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
++-----------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 5M1270ZT144C5      ;                    ;
+; Top-level entity name                                            ; fsm                ; DUT                ;
+; Family name                                                      ; MAX V              ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                      ;
++-----------------------------------------------+-----------------+-----------------+-----------------------------------------------+---------+
+; File Name with User-Entered Path              ; Used in Netlist ; File Type       ; File Name with Absolute Path                  ; Library ;
++-----------------------------------------------+-----------------+-----------------+-----------------------------------------------+---------+
+; C:/Users/visha/Downloads/Final/Final/fsm.vhdl ; yes             ; User VHDL File  ; C:/Users/visha/Downloads/Final/Final/fsm.vhdl ;         ;
++-----------------------------------------------+-----------------+-----------------+-----------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 115   ;
+;     -- Combinational with no register       ; 98    ;
+;     -- Register only                        ; 16    ;
+;     -- Combinational with a register        ; 1     ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 56    ;
+;     -- 3 input functions                    ; 29    ;
+;     -- 2 input functions                    ; 13    ;
+;     -- 1 input functions                    ; 1     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 115   ;
+;     -- arithmetic mode                      ; 0     ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 0     ;
+;     -- asynchronous clear/load mode         ; 17    ;
+;                                             ;       ;
+; Total registers                             ; 17    ;
+; I/O pins                                    ; 45    ;
+; Maximum fan-out node                        ; I[14] ;
+; Maximum fan-out                             ; 21    ;
+; Total fan-out                               ; 410   ;
+; Average fan-out                             ; 2.56  ;
++---------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
+; |fsm                       ; 115 (115)   ; 17           ; 0          ; 45   ; 0            ; 98 (98)      ; 16 (16)           ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |fsm                ; fsm         ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |fsm|y_present                                                                                                                                                                                                                                                         ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+; Name          ; y_present.s22 ; y_present.s20 ; y_present.s18 ; y_present.s17 ; y_present.s16 ; y_present.s15 ; y_present.s14 ; y_present.s13 ; y_present.s12 ; y_present.s10 ; y_present.s7 ; y_present.s5 ; y_present.s4 ; y_present.s3 ; y_present.s2 ; y_present.s1 ; y_present.s0 ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+; y_present.s0  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
+; y_present.s1  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 1            ;
+; y_present.s2  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 1            ;
+; y_present.s3  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 1            ;
+; y_present.s4  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 1            ;
+; y_present.s5  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; y_present.s7  ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; y_present.s10 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; y_present.s12 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; y_present.s13 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; y_present.s14 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; y_present.s15 ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; y_present.s16 ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; y_present.s17 ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; y_present.s18 ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; y_present.s20 ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; y_present.s22 ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; y_next.s2_1531                                      ; Selector24          ; yes                    ;
+; y_next.s0_1629                                      ; Selector24          ; yes                    ;
+; y_next.s16_1041                                     ; Selector24          ; yes                    ;
+; y_next.s18_943                                      ; Selector24          ; yes                    ;
+; y_next.s20_894                                      ; Selector24          ; yes                    ;
+; y_next.s1_1580                                      ; Selector24          ; yes                    ;
+; y_next.s4_1433                                      ; Selector24          ; yes                    ;
+; y_next.s5_1384                                      ; Selector24          ; yes                    ;
+; y_next.s7_1335                                      ; Selector24          ; yes                    ;
+; y_next.s14_1139                                     ; Selector24          ; yes                    ;
+; y_next.s22_845                                      ; Selector24          ; yes                    ;
+; y_next.s12_1237                                     ; Selector24          ; yes                    ;
+; y_next.s15_1090                                     ; Selector24          ; yes                    ;
+; y_next.s10_1286                                     ; Selector24          ; yes                    ;
+; y_next.s3_1482                                      ; Selector24          ; yes                    ;
+; y_next.s17_992                                      ; Selector24          ; yes                    ;
+; y_next.s13_1188                                     ; Selector24          ; yes                    ;
+; Number of user-specified and inferred latches = 17  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 17    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 17    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Sun Apr 17 17:48:55 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off demo -c DUT
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file c:/users/visha/downloads/final/final/testbench.vhdl
+    Info (12022): Found design unit 1: Testbench-Behave File: C:/Users/visha/Downloads/Final/Final/Testbench.vhdl Line: 9
+    Info (12023): Found entity 1: Testbench File: C:/Users/visha/Downloads/Final/Final/Testbench.vhdl Line: 7
+Info (12021): Found 5 design units, including 2 entities, in source file c:/users/visha/downloads/final/final/se.vhdl
+    Info (12022): Found design unit 1: sign_extend File: C:/Users/visha/Downloads/Final/Final/se.VHDL Line: 4
+    Info (12022): Found design unit 2: se6-arc File: C:/Users/visha/Downloads/Final/Final/se.VHDL Line: 21
+    Info (12022): Found design unit 3: se9-arc File: C:/Users/visha/Downloads/Final/Final/se.VHDL Line: 40
+    Info (12023): Found entity 1: se6 File: C:/Users/visha/Downloads/Final/Final/se.VHDL Line: 17
+    Info (12023): Found entity 2: se9 File: C:/Users/visha/Downloads/Final/Final/se.VHDL Line: 36
+Info (12021): Found 3 design units, including 1 entities, in source file c:/users/visha/downloads/final/final/rf.vhdl
+    Info (12022): Found design unit 1: register_file File: C:/Users/visha/Downloads/Final/Final/rf.VHDL Line: 5
+    Info (12022): Found design unit 2: rf-arc File: C:/Users/visha/Downloads/Final/Final/rf.VHDL Line: 21
+    Info (12023): Found entity 1: rf File: C:/Users/visha/Downloads/Final/Final/rf.VHDL Line: 17
+Info (12021): Found 7 design units, including 3 entities, in source file c:/users/visha/downloads/final/final/reg_16.vhdl
+    Info (12022): Found design unit 1: reg File: C:/Users/visha/Downloads/Final/Final/reg_16.VHDL Line: 4
+    Info (12022): Found design unit 2: tr-arc File: C:/Users/visha/Downloads/Final/Final/reg_16.VHDL Line: 25
+    Info (12022): Found design unit 3: pc_1-arc File: C:/Users/visha/Downloads/Final/Final/reg_16.VHDL Line: 42
+    Info (12022): Found design unit 4: ir-arc File: C:/Users/visha/Downloads/Final/Final/reg_16.VHDL Line: 59
+    Info (12023): Found entity 1: tr File: C:/Users/visha/Downloads/Final/Final/reg_16.VHDL Line: 21
+    Info (12023): Found entity 2: pc_1 File: C:/Users/visha/Downloads/Final/Final/reg_16.VHDL Line: 38
+    Info (12023): Found entity 3: ir File: C:/Users/visha/Downloads/Final/Final/reg_16.VHDL Line: 55
+Info (12021): Found 3 design units, including 1 entities, in source file c:/users/visha/downloads/final/final/mux_3.vhdl
+    Info (12022): Found design unit 1: mux3 File: C:/Users/visha/Downloads/Final/Final/mux_3.VHDL Line: 4
+    Info (12022): Found design unit 2: mux_3-arc File: C:/Users/visha/Downloads/Final/Final/mux_3.VHDL Line: 17
+    Info (12023): Found entity 1: mux_3 File: C:/Users/visha/Downloads/Final/Final/mux_3.VHDL Line: 13
+Info (12021): Found 5 design units, including 2 entities, in source file c:/users/visha/downloads/final/final/mux_2.vhdl
+    Info (12022): Found design unit 1: mux2 File: C:/Users/visha/Downloads/Final/Final/mux_2.VHDL Line: 4
+    Info (12022): Found design unit 2: mux_2_16-arc File: C:/Users/visha/Downloads/Final/Final/mux_2.VHDL Line: 21
+    Info (12022): Found design unit 3: mux_2_3-arc File: C:/Users/visha/Downloads/Final/Final/mux_2.VHDL Line: 44
+    Info (12023): Found entity 1: mux_2_16 File: C:/Users/visha/Downloads/Final/Final/mux_2.VHDL Line: 17
+    Info (12023): Found entity 2: mux_2_3 File: C:/Users/visha/Downloads/Final/Final/mux_2.VHDL Line: 40
+Info (12021): Found 5 design units, including 2 entities, in source file c:/users/visha/downloads/final/final/mux_1.vhdl
+    Info (12022): Found design unit 1: mux1 File: C:/Users/visha/Downloads/Final/Final/mux_1.VHDL Line: 4
+    Info (12022): Found design unit 2: mux_1_16-arc File: C:/Users/visha/Downloads/Final/Final/mux_1.VHDL Line: 21
+    Info (12022): Found design unit 3: mux_1_3-arc File: C:/Users/visha/Downloads/Final/Final/mux_1.VHDL Line: 40
+    Info (12023): Found entity 1: mux_1_16 File: C:/Users/visha/Downloads/Final/Final/mux_1.VHDL Line: 17
+    Info (12023): Found entity 2: mux_1_3 File: C:/Users/visha/Downloads/Final/Final/mux_1.VHDL Line: 36
+Info (12021): Found 3 design units, including 1 entities, in source file c:/users/visha/downloads/final/final/mem.vhdl
+    Info (12022): Found design unit 1: memory File: C:/Users/visha/Downloads/Final/Final/mem.VHDL Line: 4
+    Info (12022): Found design unit 2: mem-arc File: C:/Users/visha/Downloads/Final/Final/mem.VHDL Line: 18
+    Info (12023): Found entity 1: mem File: C:/Users/visha/Downloads/Final/Final/mem.VHDL Line: 14
+Info (12021): Found 5 design units, including 2 entities, in source file c:/users/visha/downloads/final/final/ls.vhdl
+    Info (12022): Found design unit 1: left_shift File: C:/Users/visha/Downloads/Final/Final/ls.VHDL Line: 4
+    Info (12022): Found design unit 2: ls7-arc File: C:/Users/visha/Downloads/Final/Final/ls.VHDL Line: 21
+    Info (12022): Found design unit 3: ls1-arc File: C:/Users/visha/Downloads/Final/Final/ls.VHDL Line: 33
+    Info (12023): Found entity 1: ls7 File: C:/Users/visha/Downloads/Final/Final/ls.VHDL Line: 17
+    Info (12023): Found entity 2: ls1 File: C:/Users/visha/Downloads/Final/Final/ls.VHDL Line: 29
+Info (12021): Found 3 design units, including 1 entities, in source file c:/users/visha/downloads/final/final/fsm.vhdl
+    Info (12022): Found design unit 1: controller File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 4
+    Info (12022): Found design unit 2: fsm-f File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 28
+    Info (12023): Found entity 1: fsm File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 19
+Info (12021): Found 3 design units, including 1 entities, in source file c:/users/visha/downloads/final/final/data_path.vhdl
+    Info (12022): Found design unit 1: DP File: C:/Users/visha/Downloads/Final/Final/data_path.VHDL Line: 4
+    Info (12022): Found design unit 2: data_path-arc File: C:/Users/visha/Downloads/Final/Final/data_path.VHDL Line: 22
+    Info (12023): Found entity 1: data_path File: C:/Users/visha/Downloads/Final/Final/data_path.VHDL Line: 17
+Info (12021): Found 3 design units, including 1 entities, in source file c:/users/visha/downloads/final/final/check_reg.vhdl
+    Info (12022): Found design unit 1: check_register File: C:/Users/visha/Downloads/Final/Final/check_reg.VHDL Line: 4
+    Info (12022): Found design unit 2: check_reg-arc File: C:/Users/visha/Downloads/Final/Final/check_reg.VHDL Line: 17
+    Info (12023): Found entity 1: check_reg File: C:/Users/visha/Downloads/Final/Final/check_reg.VHDL Line: 13
+Info (12021): Found 3 design units, including 1 entities, in source file c:/users/visha/downloads/final/final/check.vhdl
+    Info (12022): Found design unit 1: checker File: C:/Users/visha/Downloads/Final/Final/check.VHDL Line: 4
+    Info (12022): Found design unit 2: check-arc File: C:/Users/visha/Downloads/Final/Final/check.VHDL Line: 31
+    Info (12023): Found entity 1: check File: C:/Users/visha/Downloads/Final/Final/check.VHDL Line: 20
+Info (12021): Found 3 design units, including 1 entities, in source file c:/users/visha/downloads/final/final/ccr.vhdl
+    Info (12022): Found design unit 1: condition_code_register File: C:/Users/visha/Downloads/Final/Final/ccr.VHDL Line: 4
+    Info (12022): Found design unit 2: ccr-arc File: C:/Users/visha/Downloads/Final/Final/ccr.VHDL Line: 17
+    Info (12023): Found entity 1: ccr File: C:/Users/visha/Downloads/Final/Final/ccr.VHDL Line: 13
+Info (12021): Found 3 design units, including 1 entities, in source file c:/users/visha/downloads/final/final/alu.vhdl
+    Info (12022): Found design unit 1: arithmetic_logical_unit File: C:/Users/visha/Downloads/Final/Final/alu.VHDL Line: 4
+    Info (12022): Found design unit 2: alu-arc File: C:/Users/visha/Downloads/Final/Final/alu.VHDL Line: 17
+    Info (12023): Found entity 1: alu File: C:/Users/visha/Downloads/Final/Final/alu.VHDL Line: 13
+Info (12127): Elaborating entity "fsm" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at fsm.vhdl(31): object "ra" assigned a value but never read File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 31
+Warning (10036): Verilog HDL or VHDL warning at fsm.vhdl(31): object "rb" assigned a value but never read File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 31
+Warning (10036): Verilog HDL or VHDL warning at fsm.vhdl(31): object "rc" assigned a value but never read File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 31
+Warning (10036): Verilog HDL or VHDL warning at fsm.vhdl(32): object "imm6" assigned a value but never read File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 32
+Warning (10036): Verilog HDL or VHDL warning at fsm.vhdl(33): object "imm9" assigned a value but never read File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 33
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(65): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 65
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(102): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 102
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(103): signal "condition" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 103
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(105): signal "condition" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 105
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(106): signal "ccr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 106
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(111): signal "condition" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 111
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(112): signal "ccr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 112
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(117): signal "condition" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 117
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(120): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 120
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(122): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 122
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(123): signal "condition" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 123
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(125): signal "condition" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 125
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(126): signal "ccr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 126
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(131): signal "condition" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 131
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(132): signal "ccr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 132
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(138): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 138
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(140): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 140
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(142): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 142
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(144): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 144
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(146): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 146
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(148): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 148
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(152): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 152
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(153): signal "ccr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 153
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(158): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 158
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(160): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 160
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(162): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 162
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(166): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 166
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(168): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 168
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(178): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 178
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(180): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 180
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(182): signal "opcode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 182
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(192): signal "cf" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 192
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(200): signal "cf" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 200
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(201): signal "cf" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 201
+Warning (10492): VHDL Process Statement warning at fsm.vhdl(207): signal "cf" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 207
+Warning (10631): VHDL Process Statement warning at fsm.vhdl(96): inferring latch(es) for signal or variable "y_next", which holds its previous value in one or more paths through the process File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+Info (10041): Inferred latch for "y_next.s22" at fsm.vhdl(96) File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+Info (10041): Inferred latch for "y_next.s20" at fsm.vhdl(96) File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+Info (10041): Inferred latch for "y_next.s18" at fsm.vhdl(96) File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+Info (10041): Inferred latch for "y_next.s17" at fsm.vhdl(96) File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+Info (10041): Inferred latch for "y_next.s16" at fsm.vhdl(96) File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+Info (10041): Inferred latch for "y_next.s15" at fsm.vhdl(96) File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+Info (10041): Inferred latch for "y_next.s14" at fsm.vhdl(96) File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+Info (10041): Inferred latch for "y_next.s13" at fsm.vhdl(96) File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+Info (10041): Inferred latch for "y_next.s12" at fsm.vhdl(96) File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+Info (10041): Inferred latch for "y_next.s10" at fsm.vhdl(96) File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+Info (10041): Inferred latch for "y_next.s7" at fsm.vhdl(96) File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+Info (10041): Inferred latch for "y_next.s5" at fsm.vhdl(96) File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+Info (10041): Inferred latch for "y_next.s4" at fsm.vhdl(96) File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+Info (10041): Inferred latch for "y_next.s3" at fsm.vhdl(96) File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+Info (10041): Inferred latch for "y_next.s2" at fsm.vhdl(96) File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+Info (10041): Inferred latch for "y_next.s1" at fsm.vhdl(96) File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+Info (10041): Inferred latch for "y_next.s0" at fsm.vhdl(96) File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+Warning (13012): Latch y_next.s2_1531 has unsafe behavior File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal I[14] File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 20
+Warning (13012): Latch y_next.s18_943 has unsafe behavior File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal y_present.s2 File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 37
+Warning (13012): Latch y_next.s20_894 has unsafe behavior File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal I[15] File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 20
+Warning (13012): Latch y_next.s1_1580 has unsafe behavior File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal I[15] File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 20
+Warning (13012): Latch y_next.s4_1433 has unsafe behavior File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal y_present.s2 File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 37
+Warning (13012): Latch y_next.s5_1384 has unsafe behavior File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal I[0] File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 20
+Warning (13012): Latch y_next.s7_1335 has unsafe behavior File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal y_present.s2 File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 37
+Warning (13012): Latch y_next.s14_1139 has unsafe behavior File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal y_present.s1 File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 37
+Warning (13012): Latch y_next.s22_845 has unsafe behavior File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal y_present.s1 File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 37
+Warning (13012): Latch y_next.s12_1237 has unsafe behavior File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal y_present.s7 File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 37
+Warning (13012): Latch y_next.s10_1286 has unsafe behavior File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal y_present.s1 File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 37
+Warning (13012): Latch y_next.s3_1482 has unsafe behavior File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal y_present.s7 File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 37
+Warning (13012): Latch y_next.s13_1188 has unsafe behavior File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 96
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal y_present.s7 File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 37
+Warning (21074): Design contains 11 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "I[2]" File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 20
+    Warning (15610): No output dependent on input pin "I[3]" File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 20
+    Warning (15610): No output dependent on input pin "I[4]" File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 20
+    Warning (15610): No output dependent on input pin "I[5]" File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 20
+    Warning (15610): No output dependent on input pin "I[6]" File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 20
+    Warning (15610): No output dependent on input pin "I[7]" File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 20
+    Warning (15610): No output dependent on input pin "I[8]" File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 20
+    Warning (15610): No output dependent on input pin "I[9]" File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 20
+    Warning (15610): No output dependent on input pin "I[10]" File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 20
+    Warning (15610): No output dependent on input pin "I[11]" File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 20
+    Warning (15610): No output dependent on input pin "z" File: C:/Users/visha/Downloads/Final/Final/fsm.vhdl Line: 23
+Info (21057): Implemented 160 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 23 input pins
+    Info (21059): Implemented 22 output pins
+    Info (21061): Implemented 115 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 80 warnings
+    Info: Peak virtual memory: 4760 megabytes
+    Info: Processing ended: Sun Apr 17 17:49:08 2022
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:30
+
+

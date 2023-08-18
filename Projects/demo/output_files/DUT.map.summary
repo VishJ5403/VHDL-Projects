@@ -1,0 +1,9 @@
+Analysis & Synthesis Status : Successful - Sun Apr 17 17:49:08 2022
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : DUT
+Top-level Entity Name : fsm
+Family : MAX V
+Total logic elements : 115
+Total pins : 45
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

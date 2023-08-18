@@ -1,0 +1,240 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Projects/Sequence_Generator_HW_Structural_28Sept/simulation/modelsim
+Edff1
+Z1 w1632886699
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z4 8D:/Projects/Sequence_Generator_HW_Structural_28Sept/FF_beh.vhdl
+Z5 FD:/Projects/Sequence_Generator_HW_Structural_28Sept/FF_beh.vhdl
+l0
+L35 1
+VX_OG1`WNdTzUWj6C6RW[S2
+!s100 FZ::U4P9:@NBhk>_BOLYz1
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1632888428
+!i10b 1
+Z8 !s108 1632888428.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|D:/Projects/Sequence_Generator_HW_Structural_28Sept/FF_beh.vhdl|
+Z10 !s107 D:/Projects/Sequence_Generator_HW_Structural_28Sept/FF_beh.vhdl|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abehav
+R2
+R3
+DEx4 work 4 dff1 0 22 X_OG1`WNdTzUWj6C6RW[S2
+!i122 0
+l38
+L37 12
+VSVFnnoc7I6D5?PDk`jSM71
+!s100 bTh`d]IMgjhoiK[Bc7H3Y2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edff2
+R1
+R2
+R3
+!i122 0
+R0
+R4
+R5
+l0
+L19 1
+Vc2nTV^5]UPK^b9[_7BdQ40
+!s100 ]L6oKfhmLGeaZI6]82?l:0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Abehav
+R2
+R3
+DEx4 work 4 dff2 0 22 c2nTV^5]UPK^b9[_7BdQ40
+!i122 0
+l22
+L21 12
+VbDUUTGQno?e2dVDbMM?gA3
+!s100 >0EocGhjmSFVVI48m^:IQ2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edut
+Z13 w1632886873
+R2
+R3
+!i122 1
+R0
+Z14 8D:/Projects/Sequence_Generator_HW_Structural_28Sept/DUT.vhdl
+Z15 FD:/Projects/Sequence_Generator_HW_Structural_28Sept/DUT.vhdl
+l0
+L7 1
+Vf[i;Aa?kTDS6GD>YBjnWJ0
+!s100 hB1n]XCSP2VmFcg2i[R4e3
+R6
+31
+Z16 !s110 1632888429
+!i10b 1
+Z17 !s108 1632888429.000000
+Z18 !s90 -reportprogress|300|-93|-work|work|D:/Projects/Sequence_Generator_HW_Structural_28Sept/DUT.vhdl|
+Z19 !s107 D:/Projects/Sequence_Generator_HW_Structural_28Sept/DUT.vhdl|
+!i113 1
+R11
+R12
+Adutwrap
+R2
+R3
+DEx4 work 3 dut 0 22 f[i;Aa?kTDS6GD>YBjnWJ0
+!i122 1
+l17
+L12 18
+VJT7>Y6]ELAXVhnnTa]?Q82
+!s100 TD5jaKBI@MLF3h[<4]nTY0
+R6
+31
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R11
+R12
+Pflipflops
+R2
+R3
+!i122 0
+R1
+R0
+R4
+R5
+l0
+L3 1
+VBTm2d7BTYzl[Hkh1KX1e^3
+!s100 D8OGT0KbQaeMbm8Pzc4d[2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Esequence_generator_structural
+Z20 w1632888398
+Z21 DPx4 work 9 flipflops 0 22 BTm2d7BTYzl[Hkh1KX1e^3
+R2
+R3
+!i122 2
+R0
+Z22 8D:/Projects/Sequence_Generator_HW_Structural_28Sept/Sequence_Generator_Structural.vhdl
+Z23 FD:/Projects/Sequence_Generator_HW_Structural_28Sept/Sequence_Generator_Structural.vhdl
+l0
+L6 1
+V0n9hkCOLHjL<SGg_Wzfo:2
+!s100 UScaGQdm1HNzHTZcDfU291
+R6
+31
+R16
+!i10b 1
+R17
+Z24 !s90 -reportprogress|300|-93|-work|work|D:/Projects/Sequence_Generator_HW_Structural_28Sept/Sequence_Generator_Structural.vhdl|
+Z25 !s107 D:/Projects/Sequence_Generator_HW_Structural_28Sept/Sequence_Generator_Structural.vhdl|
+!i113 1
+R11
+R12
+Astruct
+R21
+R2
+R3
+DEx4 work 29 sequence_generator_structural 0 22 0n9hkCOLHjL<SGg_Wzfo:2
+!i122 2
+l13
+L10 29
+VE04d29Ed1b`@9V4MZ>JiZ1
+!s100 _YGBAaEY1`b;V@dMCR@K>0
+R6
+31
+R16
+!i10b 1
+R17
+R24
+R25
+!i113 1
+R11
+R12
+Etestbench
+Z26 w1632886833
+R3
+R2
+!i122 3
+R0
+Z27 8D:/Projects/Sequence_Generator_HW_Structural_28Sept/Testbench.vhdl
+Z28 FD:/Projects/Sequence_Generator_HW_Structural_28Sept/Testbench.vhdl
+l0
+L7 1
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R6
+31
+R16
+!i10b 1
+R17
+Z29 !s90 -reportprogress|300|-93|-work|work|D:/Projects/Sequence_Generator_HW_Structural_28Sept/Testbench.vhdl|
+!s107 D:/Projects/Sequence_Generator_HW_Structural_28Sept/Testbench.vhdl|
+!i113 1
+R11
+R12
+Abehave
+R3
+R2
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+!i122 3
+l69
+L9 132
+VjkJO2Q3;iXoZ>b91^4CAI3
+!s100 :]<dJl_f1?YR4lE8jMFL_2
+R6
+31
+R16
+!i10b 1
+R17
+R29
+Z30 !s107 D:/Projects/Sequence_Generator_HW_Structural_28Sept/Testbench.vhdl|
+!i113 1
+R11
+R12

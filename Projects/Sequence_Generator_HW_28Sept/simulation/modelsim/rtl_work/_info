@@ -1,0 +1,134 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Projects/Sequence_Generator_HW_28Sept/simulation/modelsim
+Edut
+Z1 w1632890257
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z4 8D:/Projects/Sequence_Generator_HW_28Sept/DUT.vhdl
+Z5 FD:/Projects/Sequence_Generator_HW_28Sept/DUT.vhdl
+l0
+L7 1
+Vf[i;Aa?kTDS6GD>YBjnWJ0
+!s100 hB1n]XCSP2VmFcg2i[R4e3
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1632890551
+!i10b 1
+Z8 !s108 1632890551.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|D:/Projects/Sequence_Generator_HW_28Sept/DUT.vhdl|
+Z10 !s107 D:/Projects/Sequence_Generator_HW_28Sept/DUT.vhdl|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Adutwrap
+R2
+R3
+DEx4 work 3 dut 0 22 f[i;Aa?kTDS6GD>YBjnWJ0
+!i122 0
+l17
+L12 18
+VI3:9zbVIfW]daQR:Az^6]3
+!s100 g`=ZkT8KK]K@lgCT=T@V`2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Esequence_behaviour
+Z13 w1632890365
+R2
+R3
+!i122 1
+R0
+Z14 8D:/Projects/Sequence_Generator_HW_28Sept/Sequence_behaviour.vhdl
+Z15 FD:/Projects/Sequence_Generator_HW_28Sept/Sequence_behaviour.vhdl
+l0
+L4 1
+VYCLJDXWbf;K4RN5XSUg:I3
+!s100 b?5?3@V3cbAMCejZ2`^V:2
+R6
+31
+Z16 !s110 1632890552
+!i10b 1
+R8
+Z17 !s90 -reportprogress|300|-93|-work|work|D:/Projects/Sequence_Generator_HW_28Sept/Sequence_behaviour.vhdl|
+Z18 !s107 D:/Projects/Sequence_Generator_HW_28Sept/Sequence_behaviour.vhdl|
+!i113 1
+R11
+R12
+Abehav
+R2
+R3
+DEx4 work 18 sequence_behaviour 0 22 YCLJDXWbf;K4RN5XSUg:I3
+!i122 1
+l20
+L9 40
+VgfkW96^SIfE3SdB@7AeQI2
+!s100 CIjV1>TdnQ`AKi8P0MS6_2
+R6
+31
+R16
+!i10b 1
+R8
+R17
+R18
+!i113 1
+R11
+R12
+Etestbench
+Z19 w1632889911
+R3
+R2
+!i122 2
+R0
+Z20 8D:/Projects/Sequence_Generator_HW_28Sept/Testbench.vhdl
+Z21 FD:/Projects/Sequence_Generator_HW_28Sept/Testbench.vhdl
+l0
+L7 1
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R6
+31
+R16
+!i10b 1
+Z22 !s108 1632890552.000000
+Z23 !s90 -reportprogress|300|-93|-work|work|D:/Projects/Sequence_Generator_HW_28Sept/Testbench.vhdl|
+!s107 D:/Projects/Sequence_Generator_HW_28Sept/Testbench.vhdl|
+!i113 1
+R11
+R12
+Abehave
+R3
+R2
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+!i122 2
+l69
+L9 132
+VjkJO2Q3;iXoZ>b91^4CAI3
+!s100 :]<dJl_f1?YR4lE8jMFL_2
+R6
+31
+R16
+!i10b 1
+R22
+R23
+Z24 !s107 D:/Projects/Sequence_Generator_HW_28Sept/Testbench.vhdl|
+!i113 1
+R11
+R12

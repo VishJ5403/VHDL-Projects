@@ -1,0 +1,33 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {D:/Projects/final/test.VHDL}
+vcom -93 -work work {D:/Projects/final/se.VHDL}
+vcom -93 -work work {D:/Projects/final/reg_16.VHDL}
+vcom -93 -work work {D:/Projects/final/mux_3.VHDL}
+vcom -93 -work work {D:/Projects/final/mux_2.VHDL}
+vcom -93 -work work {D:/Projects/final/mux_1.VHDL}
+vcom -93 -work work {D:/Projects/final/mem.VHDL}
+vcom -93 -work work {D:/Projects/final/ls.VHDL}
+vcom -93 -work work {D:/Projects/final/fsm.VHDL}
+vcom -93 -work work {D:/Projects/final/demux_3.VHDL}
+vcom -93 -work work {D:/Projects/final/check_reg.VHDL}
+vcom -93 -work work {D:/Projects/final/check.VHDL}
+vcom -93 -work work {D:/Projects/final/ccr.VHDL}
+vcom -93 -work work {D:/Projects/final/alu.VHDL}
+vcom -93 -work work {D:/Projects/final/rf.VHDL}
+vcom -93 -work work {D:/Projects/final/DUT.VHDL}
+vcom -93 -work work {D:/Projects/final/data_path.VHDL}
+
+vcom -93 -work work {C:/Users/visha/Downloads/p1u (3)/p1u/test.VHDL}
+
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs="+acc"  test
+
+add wave *
+view structure
+view signals
+run -all

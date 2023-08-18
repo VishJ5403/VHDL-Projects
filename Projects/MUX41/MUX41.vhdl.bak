@@ -1,0 +1,23 @@
+library ieee;
+use ieee.std_logic_1164.all;
+library ieee;
+use ieee.std_logic_1164.all;
+library work;
+use work.Gates.all;
+use work.MUX21.all;
+library ieee;
+use ieee.std_logic_1164.all;
+entity MUX41 is
+port(I    : in std_logic_vector(3 downto 0);
+     S    : in std_logic;
+     Y    : out std_logic);
+end entity MUX41;
+architecture Structure of MUX41 is
+
+signal a,b: std_logic;
+
+begin
+  m1:MUX21 port map(I(0),I(1),S,a);
+  m2:MUX21 port map(I(2),I(3),S,b);
+  m3:MUX21 port map(a,b,Y);
+end Structure;

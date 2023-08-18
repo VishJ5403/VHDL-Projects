@@ -1,0 +1,146 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Projects/FSM_12Oct/simulation/modelsim
+Ecov_detect
+Z1 w1651239903
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z5 8D:/Projects/FSM_12Oct/cov_detect.vhdl
+Z6 FD:/Projects/FSM_12Oct/cov_detect.vhdl
+l0
+L5 1
+VQ1Bbzk9GUe5:7D5WVi2<91
+!s100 @:c4_]J9<>R[1JM_I<:e>1
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1651251825
+!i10b 1
+Z9 !s108 1651251824.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|D:/Projects/FSM_12Oct/cov_detect.vhdl|
+Z11 !s107 D:/Projects/FSM_12Oct/cov_detect.vhdl|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Abhv
+R2
+R3
+R4
+DEx4 work 10 cov_detect 0 22 Q1Bbzk9GUe5:7D5WVi2<91
+!i122 0
+l23
+L12 105
+VC[@Z2_@`68mMc[o7bb9EF2
+!s100 Xbc8^fYU_XGjTj?K3O]]Q2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Elcd_controller
+Z14 w1634103936
+Z15 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z16 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R3
+R4
+!i122 1
+R0
+Z17 8D:/Projects/FSM_12Oct/lcd_controller.vhdl
+Z18 FD:/Projects/FSM_12Oct/lcd_controller.vhdl
+l0
+L6 1
+V^CoCG0II3OD@lbKG2E@Jn2
+!s100 9h^W>W1HeIfQc8D1Lk5Me3
+R7
+31
+R8
+!i10b 1
+Z19 !s108 1651251825.000000
+Z20 !s90 -reportprogress|300|-93|-work|work|D:/Projects/FSM_12Oct/lcd_controller.vhdl|
+Z21 !s107 D:/Projects/FSM_12Oct/lcd_controller.vhdl|
+!i113 1
+R12
+R13
+Abehavioral
+R15
+R16
+R3
+R4
+DEx4 work 14 lcd_controller 0 22 ^CoCG0II3OD@lbKG2E@Jn2
+!i122 1
+l42
+L24 165
+Veg6kFbC5<GSmkehKAO[i03
+!s100 dMP^i7VFMU>E[LIV<PknD0
+R7
+31
+R8
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Etest
+Z22 w1651240142
+R2
+R16
+R15
+R3
+R4
+!i122 2
+R0
+Z23 8D:/Projects/FSM_12Oct/Test.vhdl
+Z24 FD:/Projects/FSM_12Oct/Test.vhdl
+l0
+L7 1
+VF2_SKFhlcJ2AK9:83Q:=H1
+!s100 G0;7o]9>_bLN89^76]]?=1
+R7
+31
+R8
+!i10b 1
+R19
+Z25 !s90 -reportprogress|300|-93|-work|work|D:/Projects/FSM_12Oct/Test.vhdl|
+!s107 D:/Projects/FSM_12Oct/Test.vhdl|
+!i113 1
+R12
+R13
+Abehave
+R2
+R16
+R15
+R3
+R4
+DEx4 work 4 test 0 22 F2_SKFhlcJ2AK9:83Q:=H1
+!i122 2
+l64
+L22 146
+Vj4D5kkQ:GgPI8GmgiLAmX0
+!s100 mD_C^[VMgInojY85d[Xmm2
+R7
+31
+R8
+!i10b 1
+R19
+R25
+Z26 !s107 D:/Projects/FSM_12Oct/Test.vhdl|
+!i113 1
+R12
+R13

@@ -1,0 +1,1258 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/simulation/modelsim
+Ealu
+Z1 w1651254938
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z4 8C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/alu.VHDL
+Z5 FC:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/alu.VHDL
+l0
+Z6 L13 1
+VQdE8:mnkAK`B0Az]7_Fca3
+!s100 >FnZU=KR_M<>Hm^eL^VCe2
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1651333880
+!i10b 1
+Z9 !s108 1651333880.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/alu.VHDL|
+Z11 !s107 C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/alu.VHDL|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Aarc
+R2
+R3
+DEx4 work 3 alu 0 22 QdE8:mnkAK`B0Az]7_Fca3
+!i122 0
+l32
+L17 43
+V2l34YGiRkJ`b?I=MXCmVd1
+!s100 CL47HjWZon@hT0;b`mkeB2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Parithmetic_logical_unit
+R2
+R3
+!i122 0
+R1
+R0
+R4
+R5
+l0
+L4 1
+V;0aYFMP<dJhXieWWGIj2P3
+!s100 RC>T_f0>ZBnf:TOe994120
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eccr
+R1
+R2
+R3
+!i122 1
+R0
+Z14 8C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/ccr.VHDL
+Z15 FC:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/ccr.VHDL
+l0
+R6
+VF^E`UBEm?_9PXCl^gP4iV2
+!s100 W2Cbd1hFB[NINL]lefBDa3
+R7
+31
+R8
+!i10b 1
+R9
+Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/ccr.VHDL|
+Z17 !s107 C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/ccr.VHDL|
+!i113 1
+R12
+R13
+Aarc
+R2
+R3
+DEx4 work 3 ccr 0 22 F^E`UBEm?_9PXCl^gP4iV2
+!i122 1
+l18
+L17 14
+VTI6HUh_K>MdbXem5B<MS`1
+!s100 NbdoES<A62TBXb>O[UPA^0
+R7
+31
+R8
+!i10b 1
+R9
+R16
+R17
+!i113 1
+R12
+R13
+Echeck
+R1
+R2
+R3
+!i122 2
+R0
+Z18 8C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/check.VHDL
+Z19 FC:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/check.VHDL
+l0
+Z20 L14 1
+VFUln:^S7i;@3?9A6PSYj[1
+!s100 >]aZVCFOgnK[zmKk6bY901
+R7
+31
+R8
+!i10b 1
+R9
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/check.VHDL|
+Z22 !s107 C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/check.VHDL|
+!i113 1
+R12
+R13
+Aarc
+R2
+R3
+DEx4 work 5 check 0 22 FUln:^S7i;@3?9A6PSYj[1
+!i122 2
+l20
+L19 75
+Vh1CXH`hL;zm?n`IFUIYI^3
+!s100 ak1_K3b0mgO1fT=JBL[]i1
+R7
+31
+R8
+!i10b 1
+R9
+R21
+R22
+!i113 1
+R12
+R13
+Echeck_reg
+R1
+R2
+R3
+!i122 3
+R0
+Z23 8C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/check_reg.VHDL
+Z24 FC:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/check_reg.VHDL
+l0
+R6
+V8Rd9@jFfF7EDWOTbDi70Q3
+!s100 EDcH]LK]=zhC:BN@QAWQa3
+R7
+31
+R8
+!i10b 1
+R9
+Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/check_reg.VHDL|
+Z26 !s107 C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/check_reg.VHDL|
+!i113 1
+R12
+R13
+Aarc
+R2
+R3
+DEx4 work 9 check_reg 0 22 8Rd9@jFfF7EDWOTbDi70Q3
+!i122 3
+l18
+L17 10
+VcPC^^aB6^?PCHoZ9QR8l>2
+!s100 :RcRJ;Jka`@77eTSOgPM[3
+R7
+31
+R8
+!i10b 1
+R9
+R25
+R26
+!i113 1
+R12
+R13
+Pcheck_register
+R2
+R3
+!i122 3
+R1
+R0
+R23
+R24
+l0
+L4 1
+V5U5_b0_@EGQbmjb5lCO010
+!s100 @:Af5FY6@g`fUo6WlP>o03
+R7
+31
+R8
+!i10b 1
+R9
+R25
+R26
+!i113 1
+R12
+R13
+Pchecker
+R2
+R3
+!i122 2
+R1
+R0
+R18
+R19
+l0
+L4 1
+VHaT3YIbJRXEK_MbX[8FUg3
+!s100 @le:[o^Vj_>Az4bDHgh7k3
+R7
+31
+R8
+!i10b 1
+R9
+R21
+R22
+!i113 1
+R12
+R13
+Pcondition_code_register
+R2
+R3
+!i122 1
+R1
+R0
+R14
+R15
+l0
+L4 1
+V<>25?n:oHD<:;lHF]<5S50
+!s100 P419Q8XFN5dQ2^=9_YfeG1
+R7
+31
+R8
+!i10b 1
+R9
+R16
+R17
+!i113 1
+R12
+R13
+Pcontroller
+Z27 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R2
+R3
+!i122 4
+R1
+R0
+Z28 8C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/fsm.VHDL
+Z29 FC:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/fsm.VHDL
+l0
+L5 1
+V8E1YL8lB5;@e5eO5UHJk51
+!s100 R;]h;MJD:iO]g46OlmHCn2
+R7
+31
+R8
+!i10b 1
+R9
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/fsm.VHDL|
+Z31 !s107 C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/fsm.VHDL|
+!i113 1
+R12
+R13
+Edata_path
+Z32 w1651328532
+Z33 DPx4 work 4 mux3 0 22 @0iR^C_];AYD?d0_oA[;l0
+Z34 DPx4 work 4 mux2 0 22 ZSJTEnO]=b26:8E;g^;[R1
+Z35 DPx4 work 4 mux1 0 22 87B_`f:>4^LbBkN:4DN9<0
+Z36 DPx4 work 6 memory 0 22 :M1f<G4l7H[Q<fIB3i:Rg2
+Z37 DPx4 work 23 arithmetic_logical_unit 0 22 ;0aYFMP<dJhXieWWGIj2P3
+Z38 DPx4 work 11 sign_extend 0 22 WzaXHhj;9_]1[W<gzhU771
+Z39 DPx4 work 10 left_shift 0 22 EOD>K;a]z=mT?a>ECejHB3
+Z40 DPx4 work 13 register_file 0 22 WYlfFG;X[4MUlWMT?COS90
+Z41 DPx4 work 3 reg 0 22 Rn^0fS>D:L368N]]FNM@g1
+Z42 DPx4 work 23 condition_code_register 0 22 <>25?n:oHD<:;lHF]<5S50
+Z43 DPx4 work 14 check_register 0 22 5U5_b0_@EGQbmjb5lCO010
+Z44 DPx4 work 7 checker 0 22 HaT3YIbJRXEK_MbX[8FUg3
+R2
+R3
+!i122 13
+R0
+Z45 8C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/data_path.VHDL
+Z46 FC:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/data_path.VHDL
+l0
+L26 1
+VV;Va_6bfFdP5d@a>`_5Cm3
+!s100 XL7<7iY[nXL[N07V=;C0e2
+R7
+31
+Z47 !s110 1651333882
+!i10b 1
+Z48 !s108 1651333881.000000
+Z49 !s90 -reportprogress|300|-93|-work|work|C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/data_path.VHDL|
+Z50 !s107 C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/data_path.VHDL|
+!i113 1
+R12
+R13
+Aarc
+R33
+R34
+R35
+R36
+R37
+R38
+R39
+R40
+R41
+R42
+R43
+R44
+R2
+R3
+DEx4 work 9 data_path 0 22 V;Va_6bfFdP5d@a>`_5Cm3
+!i122 13
+l70
+L30 88
+V]Vl55[bzDa@V2:Z:=>15k2
+!s100 Si<ED2;dj49Be7J?DInOb0
+R7
+31
+R47
+!i10b 1
+R48
+R49
+R50
+!i113 1
+R12
+R13
+Pdp
+R2
+R3
+!i122 13
+R32
+R0
+R45
+R46
+l0
+L4 1
+V^NLn?Ken_L<_jm3:MG2j@1
+!s100 _YcP`9mFl8K6KeenHX>j82
+R7
+31
+Z51 !s110 1651333881
+!i10b 1
+R48
+R49
+R50
+!i113 1
+R12
+R13
+Edut
+Z52 w1651328502
+R27
+Z53 DPx4 work 10 controller 0 22 8E1YL8lB5;@e5eO5UHJk51
+Z54 DPx4 work 2 dp 0 22 ^NLn?Ken_L<_jm3:MG2j@1
+R2
+R3
+!i122 14
+R0
+Z55 8C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/DUT.VHDL
+Z56 FC:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/DUT.VHDL
+l0
+L7 1
+VVOfWYh7kWLTS1n<BGRZz>1
+!s100 3EkM6aBaUL0nTVWCCE4Zk0
+R7
+31
+R47
+!i10b 1
+Z57 !s108 1651333882.000000
+Z58 !s90 -reportprogress|300|-93|-work|work|C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/DUT.VHDL|
+Z59 !s107 C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/DUT.VHDL|
+!i113 1
+R12
+R13
+Aarc
+R27
+R53
+R54
+R2
+R3
+DEx4 work 3 dut 0 22 VOfWYh7kWLTS1n<BGRZz>1
+!i122 14
+l15
+L11 8
+VCYi1QiWU:`C;jeO=Uld`l3
+!s100 A6Og1TdK_ez0NkDOoakR@1
+R7
+31
+R47
+!i10b 1
+R57
+R58
+R59
+!i113 1
+R12
+R13
+Efsm
+R1
+R27
+R2
+R3
+!i122 4
+R0
+R28
+R29
+l0
+L15 1
+V2JheGUf1C0_AVHOTBJ8W_2
+!s100 bi]SW:;LcFA7MJ;nQ@=WT3
+R7
+31
+R8
+!i10b 1
+R9
+R30
+R31
+!i113 1
+R12
+R13
+Aarc
+R27
+R2
+R3
+DEx4 work 3 fsm 0 22 2JheGUf1C0_AVHOTBJ8W_2
+!i122 4
+l24
+L19 186
+V4XRmd;4ZCbX8iS^C?WAK^1
+!s100 JEPfDaJ4`FB94ZX6GzYVk1
+R7
+31
+R8
+!i10b 1
+R9
+R30
+R31
+!i113 1
+R12
+R13
+Eir
+R1
+R2
+R3
+!i122 10
+R0
+Z60 8C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/reg_16.VHDL
+Z61 FC:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/reg_16.VHDL
+l0
+L55 1
+ViL>kZ>nh]Y2_mRlYGc_KJ2
+!s100 MZ?TUM2`^[KEdd3Z_zkgl3
+R7
+31
+R51
+!i10b 1
+R48
+Z62 !s90 -reportprogress|300|-93|-work|work|C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/reg_16.VHDL|
+Z63 !s107 C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/reg_16.VHDL|
+!i113 1
+R12
+R13
+Aarc
+R2
+R3
+DEx4 work 2 ir 0 22 iL>kZ>nh]Y2_mRlYGc_KJ2
+!i122 10
+l60
+L59 9
+V_lG;EA=HaKd8NJfh@`bQ83
+!s100 LWnRlP1<YWGa[`>GkG@Db2
+R7
+31
+R51
+!i10b 1
+R48
+R62
+R63
+!i113 1
+R12
+R13
+Pleft_shift
+R2
+R3
+!i122 5
+R1
+R0
+Z64 8C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/ls.VHDL
+Z65 FC:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/ls.VHDL
+l0
+L4 1
+VEOD>K;a]z=mT?a>ECejHB3
+!s100 KXCFdW6I1UH3[a1MomS7h2
+R7
+31
+R51
+!i10b 1
+R9
+Z66 !s90 -reportprogress|300|-93|-work|work|C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/ls.VHDL|
+Z67 !s107 C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/ls.VHDL|
+!i113 1
+R12
+R13
+Els1
+R1
+R2
+R3
+!i122 5
+R0
+R64
+R65
+l0
+L29 1
+VlRB^FAA7;F`<Um0gz^B3E3
+!s100 6eIzgc[j9VAZ0=oDlB^zR3
+R7
+31
+R51
+!i10b 1
+R9
+R66
+R67
+!i113 1
+R12
+R13
+Aarc
+R2
+R3
+DEx4 work 3 ls1 0 22 lRB^FAA7;F`<Um0gz^B3E3
+!i122 5
+l35
+L33 6
+VEOX3GRLIMG@mL`9j3NGF73
+!s100 8Pm92;48P@YPdT<OeLDjK1
+R7
+31
+R51
+!i10b 1
+R9
+R66
+R67
+!i113 1
+R12
+R13
+Els7
+R1
+R2
+R3
+!i122 5
+R0
+R64
+R65
+l0
+Z68 L17 1
+Vf>h4i_XE8][I_`09KYKOJ3
+!s100 dkmgLNU3PeU>8IdOeY4n[1
+R7
+31
+R51
+!i10b 1
+R9
+R66
+R67
+!i113 1
+R12
+R13
+Aarc
+R2
+R3
+DEx4 work 3 ls7 0 22 f>h4i_XE8][I_`09KYKOJ3
+!i122 5
+l22
+L21 4
+VaHGV97:_=EN]RJFQEDDNo2
+!s100 1GEU4;I0EeS1aOcLlh::C2
+R7
+31
+R51
+!i10b 1
+R9
+R66
+R67
+!i113 1
+R12
+R13
+Emem
+Z69 w1651333846
+R27
+R2
+R3
+!i122 6
+R0
+Z70 8C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/mem.VHDL
+Z71 FC:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/mem.VHDL
+l0
+R20
+V[R:n=0]H1ZYR_E08JSkJZ2
+!s100 U>8@>39z:KVVfj__hI_U@3
+R7
+31
+R51
+!i10b 1
+R48
+Z72 !s90 -reportprogress|300|-93|-work|work|C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/mem.VHDL|
+Z73 !s107 C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/mem.VHDL|
+!i113 1
+R12
+R13
+Aarc
+R27
+R2
+R3
+DEx4 work 3 mem 0 22 [R:n=0]H1ZYR_E08JSkJZ2
+!i122 6
+l21
+L18 33
+V?5fbj05:[oS6F?TOieETX2
+!s100 =OD?W`jEP908LR<AP]WI^1
+R7
+31
+R51
+!i10b 1
+R48
+R72
+R73
+!i113 1
+R12
+R13
+Pmemory
+R2
+R3
+!i122 6
+R69
+R0
+R70
+R71
+l0
+L4 1
+V:M1f<G4l7H[Q<fIB3i:Rg2
+!s100 ^_I9<TO=cJ[3d`E?z[8Hl0
+R7
+31
+R51
+!i10b 1
+R48
+R72
+R73
+!i113 1
+R12
+R13
+Pmux1
+R2
+R3
+!i122 7
+R1
+R0
+Z74 8C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/mux_1.VHDL
+Z75 FC:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/mux_1.VHDL
+l0
+L4 1
+V87B_`f:>4^LbBkN:4DN9<0
+!s100 U<m:O;_[eA;JXg`Sf[=bd2
+R7
+31
+R51
+!i10b 1
+R48
+Z76 !s90 -reportprogress|300|-93|-work|work|C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/mux_1.VHDL|
+Z77 !s107 C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/mux_1.VHDL|
+!i113 1
+R12
+R13
+Pmux2
+R2
+R3
+!i122 8
+R1
+R0
+Z78 8C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/mux_2.VHDL
+Z79 FC:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/mux_2.VHDL
+l0
+L4 1
+VZSJTEnO]=b26:8E;g^;[R1
+!s100 ]F@eUkmS;6YfI5jFod1^G0
+R7
+31
+R51
+!i10b 1
+R48
+Z80 !s90 -reportprogress|300|-93|-work|work|C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/mux_2.VHDL|
+Z81 !s107 C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/mux_2.VHDL|
+!i113 1
+R12
+R13
+Pmux3
+R2
+R3
+!i122 9
+R1
+R0
+Z82 8C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/mux_3.VHDL
+Z83 FC:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/mux_3.VHDL
+l0
+L4 1
+V@0iR^C_];AYD?d0_oA[;l0
+!s100 ;@MVSh;2WioP:iF[<DWfP1
+R7
+31
+R51
+!i10b 1
+R48
+Z84 !s90 -reportprogress|300|-93|-work|work|C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/mux_3.VHDL|
+Z85 !s107 C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/mux_3.VHDL|
+!i113 1
+R12
+R13
+Emux_1_16
+R1
+R2
+R3
+!i122 7
+R0
+R74
+R75
+l0
+R68
+VAJ0TkcRVYhhS84o@j>GYa0
+!s100 30ABJ1=FPcj580fSedR@l0
+R7
+31
+R51
+!i10b 1
+R48
+R76
+R77
+!i113 1
+R12
+R13
+Aarc
+R2
+R3
+DEx4 work 8 mux_1_16 0 22 AJ0TkcRVYhhS84o@j>GYa0
+!i122 7
+l22
+Z86 L21 11
+VUV7301lKL3An`^]f4Q1RK3
+!s100 bEz@CnKo]fX5N[f3OVTzP0
+R7
+31
+R51
+!i10b 1
+R48
+R76
+R77
+!i113 1
+R12
+R13
+Emux_1_3
+R1
+R2
+R3
+!i122 7
+R0
+R74
+R75
+l0
+Z87 L36 1
+Vd78`NdiYgk?]GK>m@_RWU2
+!s100 ?Qm_<>2hmWa>A^W6CAflk1
+R7
+31
+R51
+!i10b 1
+R48
+R76
+R77
+!i113 1
+R12
+R13
+Aarc
+R2
+R3
+DEx4 work 7 mux_1_3 0 22 d78`NdiYgk?]GK>m@_RWU2
+!i122 7
+l41
+Z88 L40 11
+V_h1n^j?<4g=@km[ggDQbB2
+!s100 JfQHLW>QN`D:HCVQLJfbc2
+R7
+31
+R51
+!i10b 1
+R48
+R76
+R77
+!i113 1
+R12
+R13
+Emux_2_16
+R1
+R2
+R3
+!i122 8
+R0
+R78
+R79
+l0
+R68
+VlacbUnMYHI=9:d<3Wij3T1
+!s100 LZAf6M0c3k`<P:=>fKaD]2
+R7
+31
+R51
+!i10b 1
+R48
+R80
+R81
+!i113 1
+R12
+R13
+Aarc
+R2
+R3
+DEx4 work 8 mux_2_16 0 22 lacbUnMYHI=9:d<3Wij3T1
+!i122 8
+l22
+L21 15
+VC9R66cUTSlgKD7iiZ>;aG1
+!s100 _HmKRM?CTT3n^86Q:<^RC0
+R7
+31
+R51
+!i10b 1
+R48
+R80
+R81
+!i113 1
+R12
+R13
+Emux_2_3
+R1
+R2
+R3
+!i122 8
+R0
+R78
+R79
+l0
+L40 1
+V:3N511b12ib1RN>AlzH@_3
+!s100 zgF9S_^3=41>jSF]aNEKo1
+R7
+31
+R51
+!i10b 1
+R48
+R80
+R81
+!i113 1
+R12
+R13
+Aarc
+R2
+R3
+DEx4 work 7 mux_2_3 0 22 :3N511b12ib1RN>AlzH@_3
+!i122 8
+l45
+L44 15
+V@U86:l[G2`EcRb3JkGd?Q2
+!s100 afloM<7aKW]<eEeRQUji@0
+R7
+31
+R51
+!i10b 1
+R48
+R80
+R81
+!i113 1
+R12
+R13
+Emux_3
+R1
+R2
+R3
+!i122 9
+R0
+R82
+R83
+l0
+R6
+VzGWfFY@GZKXXkV1J6YI4h2
+!s100 eLgd[13MdmI21SR]DlZF[3
+R7
+31
+R51
+!i10b 1
+R48
+R84
+R85
+!i113 1
+R12
+R13
+Aarc
+R2
+R3
+DEx4 work 5 mux_3 0 22 zGWfFY@GZKXXkV1J6YI4h2
+!i122 9
+l18
+L17 23
+Vgj=[Bjg2@eKWSFheU=M0n2
+!s100 l?z[SI95gOLOED3YdAU0E0
+R7
+31
+R51
+!i10b 1
+R48
+R84
+R85
+!i113 1
+R12
+R13
+Epc
+R1
+R2
+R3
+!i122 10
+R0
+R60
+R61
+l0
+L38 1
+VhZdo8DAR=V=M=QWQ84^dR1
+!s100 jXi<F3FG_VhGzT=LlRDdn2
+R7
+31
+R51
+!i10b 1
+R48
+R62
+R63
+!i113 1
+R12
+R13
+Aarc
+R2
+R3
+DEx4 work 2 pc 0 22 hZdo8DAR=V=M=QWQ84^dR1
+!i122 10
+l43
+L42 9
+V^@AAQH`jSZb>J^8JNK4ZO1
+!s100 FV>jgo@1;iDdUmGWmgC5U3
+R7
+31
+R51
+!i10b 1
+R48
+R62
+R63
+!i113 1
+R12
+R13
+Preg
+R2
+R3
+!i122 10
+R1
+R0
+R60
+R61
+l0
+L4 1
+VRn^0fS>D:L368N]]FNM@g1
+!s100 ;=]oTCVEDTV:=j07bUL`83
+R7
+31
+R51
+!i10b 1
+R48
+R62
+R63
+!i113 1
+R12
+R13
+Pregister_file
+R2
+R3
+!i122 11
+Z89 w1651324889
+R0
+Z90 8C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/rf.VHDL
+Z91 FC:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/rf.VHDL
+l0
+L4 1
+VWYlfFG;X[4MUlWMT?COS90
+!s100 cV^oOKnX5Y[hTgaAQ6>Gg2
+R7
+31
+R51
+!i10b 1
+R48
+Z92 !s90 -reportprogress|300|-93|-work|work|C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/rf.VHDL|
+Z93 !s107 C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/rf.VHDL|
+!i113 1
+R12
+R13
+Erf
+R89
+R27
+R2
+R3
+!i122 11
+R0
+R90
+R91
+l0
+R20
+VJ_j9oHnb>Om078@O2@nY@3
+!s100 NQW>X@9inlQSZ52dR@Ib[0
+R7
+31
+R51
+!i10b 1
+R48
+R92
+R93
+!i113 1
+R12
+R13
+Aarc
+R27
+R2
+R3
+DEx4 work 2 rf 0 22 J_j9oHnb>Om078@O2@nY@3
+!i122 11
+l22
+L18 19
+V`9I>dHCz3jI6K]X2>RECW3
+!s100 >Fn_KLfD[5JFNQkY_b=zJ3
+R7
+31
+R51
+!i10b 1
+R48
+R92
+R93
+!i113 1
+R12
+R13
+Ese6
+R1
+R2
+R3
+!i122 12
+R0
+Z94 8C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/se.VHDL
+Z95 FC:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/se.VHDL
+l0
+R68
+VPad@>5Bd04c:CR^0R3cTi1
+!s100 RWHXDJA=X0C:_?WgF<;cA1
+R7
+31
+R51
+!i10b 1
+R48
+Z96 !s90 -reportprogress|300|-93|-work|work|C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/se.VHDL|
+Z97 !s107 C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/se.VHDL|
+!i113 1
+R12
+R13
+Aarc
+R2
+R3
+DEx4 work 3 se6 0 22 Pad@>5Bd04c:CR^0R3cTi1
+!i122 12
+l22
+R86
+V6;DBXj<_oZF7e;=eAAO^_0
+!s100 JU8GndWDeh<7gkTRcGfM_1
+R7
+31
+R51
+!i10b 1
+R48
+R96
+R97
+!i113 1
+R12
+R13
+Ese9
+R1
+R2
+R3
+!i122 12
+R0
+R94
+R95
+l0
+R87
+V@4QSbi3zn_]@nSJ[dDfYO3
+!s100 EfR0F`E<4cWT5G09?_:N?3
+R7
+31
+R51
+!i10b 1
+R48
+R96
+R97
+!i113 1
+R12
+R13
+Aarc
+R2
+R3
+DEx4 work 3 se9 0 22 @4QSbi3zn_]@nSJ[dDfYO3
+!i122 12
+l41
+R88
+Vo5TYcO]GACDg[>7TS5Pi]1
+!s100 Td8I28?YeihMEn?jAlC<=1
+R7
+31
+R51
+!i10b 1
+R48
+R96
+R97
+!i113 1
+R12
+R13
+Psign_extend
+R2
+R3
+!i122 12
+R1
+R0
+R94
+R95
+l0
+L4 1
+VWzaXHhj;9_]1[W<gzhU771
+!s100 _1gWIZk8IA4L<6eGb4cI:2
+R7
+31
+R51
+!i10b 1
+R48
+R96
+R97
+!i113 1
+R12
+R13
+Etest
+Z98 w1651330567
+R3
+R2
+!i122 15
+R0
+Z99 8C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/test.VHDL
+Z100 FC:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/test.VHDL
+l0
+L6 1
+V1PUWM_TCE:<m8a>k;J8dX0
+!s100 MeV2h<<dOcgT@YY:da_cf3
+R7
+31
+R47
+!i10b 1
+R57
+Z101 !s90 -reportprogress|300|-93|-work|work|C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/test.VHDL|
+!s107 C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/test.VHDL|
+!i113 1
+R12
+R13
+Aarc
+R3
+R2
+DEx4 work 4 test 0 22 1PUWM_TCE:<m8a>k;J8dX0
+!i122 15
+l57
+L9 83
+VS^fQEgNo[?A;:Nz:7oJcY3
+!s100 AMI<4zh1XfA5h5b4`j4fl2
+R7
+31
+R47
+!i10b 1
+R57
+R101
+Z102 !s107 C:/Users/hp/Desktop/IITB_RISC_Multi-Cycle/test.VHDL|
+!i113 1
+R12
+R13
+Etr
+R1
+R2
+R3
+!i122 10
+R0
+R60
+R61
+l0
+L21 1
+VdIEL:EB;l]U3eIbhFSNOS3
+!s100 n;Bb;lMdeb>am]QMPNeNS0
+R7
+31
+R51
+!i10b 1
+R48
+R62
+R63
+!i113 1
+R12
+R13
+Aarc
+R2
+R3
+DEx4 work 2 tr 0 22 dIEL:EB;l]U3eIbhFSNOS3
+!i122 10
+l26
+L25 9
+VVHUKUH=6^VX]LiPY9Kf9Z3
+!s100 ?UeYH<aVhZ>YeiXfH6[7R2
+R7
+31
+R51
+!i10b 1
+R48
+R62
+R63
+!i113 1
+R12
+R13

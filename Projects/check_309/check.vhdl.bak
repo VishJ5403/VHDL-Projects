@@ -1,0 +1,41 @@
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity alu_beh is
+    generic(
+        operand_width : integer:=8;
+        sel_line : integer:=2
+        );
+    port (
+        A: in std_logic_vector(operand_width-1 downto 0);
+		  f1,f2: out std_logic;
+        op: out std_logic_vector(2 downto 0)
+    ) ;
+end alu_beh;
+
+architecture a1 of alu_beh is
+   signal count: std_logic;
+begin
+alu : process( A )
+begin
+   -- complete VHDL code for various outputs of ALU based on select lines
+   -- Hint: use if/else statement
+   --
+   -- add function usage :
+   --   signal_name <= add(A,B)
+   --   variable_name := add(A,B)
+   --
+   -- concatenate operator usage:
+   --    "0000"&A 
+	if (sel="00") then
+         op<=A&B;
+   elsif (sel="01") then
+         op<="000"&add(A,B);
+	elsif (sel="10") then
+         op<="0000"&(A XOR B);
+   else
+         op<="000"&add(A,A);
+end if;
+end process ; -- alu
+end a1 ; -- a1
