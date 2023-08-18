@@ -1,0 +1,44 @@
+|DUT
+input_vector[0] => Vow:add_instance.I[0]
+input_vector[1] => Vow:add_instance.I[1]
+input_vector[2] => Vow:add_instance.I[2]
+input_vector[3] => Vow:add_instance.I[3]
+output_vector[0] << Vow:add_instance.Y
+
+
+|DUT|Vow:add_instance
+I[0] => INVERTER:i2.A
+I[1] => XOR_2:xo1.B
+I[2] => AND_2:a1.B
+I[3] => AND_2:a1.A
+Y <= AND_2:a2.Y
+
+
+|DUT|Vow:add_instance|INVERTER:i1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Vow:add_instance|INVERTER:i2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Vow:add_instance|AND_2:a1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Vow:add_instance|AND_2:a2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|Vow:add_instance|XOR_2:xo1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

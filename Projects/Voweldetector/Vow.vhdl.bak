@@ -1,0 +1,30 @@
+library ieee;
+use ieee.std_logic_1164.all;
+library ieee;
+use ieee.std_logic_1164.all;
+library work;
+use work.Gates.all;
+library ieee;
+use ieee.std_logic_1164.all;
+entity Vow is
+port(I    : in std_logic_vector(3 downto 0);
+     Y    : out std_logic);
+end entity Vow;
+architecture Structure of Vow is
+
+signal a,b,c,d,e,f,g,h,j,k,l: std_logic;
+
+begin
+  i1: INVERTER port map (I(0),a);
+  i2: INVERTER port map (I(1),b);
+  i3: INVERTER port map (I(2),c);
+  i4: INVERTER port map (I(3),d);
+  a1: AND_2 port map (d,I(2),e);
+  a2: AND_2 port map (e,I(1),f);
+  a3: AND_2 port map (f,I(0),g);
+  a4: AND_2 port map (d,c,h);
+  a5: AND_2 port map (h,b,j);
+  a6: AND_2 port map (h,a,k);
+  o1: OR_2  port map (l,k,Y);
+  o2: OR_2  port map (g,j,l);
+end Structure;

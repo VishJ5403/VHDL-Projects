@@ -1,0 +1,7 @@
+
+State Machine - |timer_controller|y_present
+Name y_present.t3 y_present.t2 y_present.t1 y_present.rst 
+y_present.rst 0 0 0 0 
+y_present.t1 0 0 1 1 
+y_present.t2 0 1 0 1 
+y_present.t3 1 0 0 1 

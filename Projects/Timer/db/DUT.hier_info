@@ -1,0 +1,25 @@
+|timer_controller
+inp_switch[0] => Equal0.IN2
+inp_switch[0] => Equal1.IN2
+inp_switch[0] => Equal2.IN1
+inp_switch[0] => Equal3.IN1
+inp_switch[1] => Equal0.IN1
+inp_switch[1] => Equal1.IN1
+inp_switch[1] => Equal2.IN2
+inp_switch[1] => Equal3.IN0
+inp_switch[2] => Equal0.IN0
+inp_switch[2] => Equal1.IN0
+inp_switch[2] => Equal2.IN0
+inp_switch[2] => Equal3.IN2
+reset => y_present.OUTPUTSELECT
+reset => y_present.OUTPUTSELECT
+reset => y_present.OUTPUTSELECT
+reset => y_present.OUTPUTSELECT
+clock_50 => y_present~1.DATAIN
+clock_1 => ~NO_FANOUT~
+out_LED[0] <= Selector7.DB_MAX_OUTPUT_PORT_TYPE
+out_LED[1] <= Selector6.DB_MAX_OUTPUT_PORT_TYPE
+out_LED[2] <= Selector5.DB_MAX_OUTPUT_PORT_TYPE
+out_LED[3] <= Selector4.DB_MAX_OUTPUT_PORT_TYPE
+
+
